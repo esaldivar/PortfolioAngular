@@ -5,22 +5,26 @@ header {
     display: flex;
     justify-content: flex-end;
 
-    nav ul {
+    nav ol {
         display: flex;
         gap: 3rem;
         padding: 0;
         margin: 0;
         list-style: none;
-
-        li a {
-            color: #ccd6f6;
-            text-decoration: none;
-            font-weight: bold; 
-
-            &:hover {
-                color: #64ffda;
-            }
-          }
+        li {
+            counter-increment: item 1;
+            a {
+                font-family: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
+                font-size: 1rem;
+                color: #ccd6f6;
+                text-decoration: none;
+                font-weight: bold; 
+    
+                &:hover {
+                    color: #64ffda;
+                }
+              }
+        } 
       }
   }
   
