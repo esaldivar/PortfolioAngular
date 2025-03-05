@@ -20,22 +20,21 @@ header {
     height: 100%;
   }
   
-  nav ul {
+  nav ol {
     display: flex;
-    gap: 2rem;
-    list-style: none;
+    gap: 3rem;
     align-items: flex-start;
     padding: 0;
     margin: 0;
   }
   
-  nav ul li a {
-    color: white;
+  nav ol li a {
+    color: #64ffda;
     text-decoration: none;
     font-weight: bold;
   }
   
-  nav ul li a:hover {
+  nav ol li a:hover {
     color: #aca8ac;
   }
   
