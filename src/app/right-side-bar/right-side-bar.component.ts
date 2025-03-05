@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrl: './right-side-bar.component.scss'
 })
 export class RightSideBarComponent {
-
+  email = 'esaldivar1214@gmail.com';
 }

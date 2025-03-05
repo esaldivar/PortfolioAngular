@@ -26,7 +26,31 @@
         }
     }
     .email-section {
-        background-color: red;
         margin-bottom: 5rem;
+        margin: 20px 0 5rem 0;
+        padding: 10px;
+        font-family: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
+        line-height: 18px;
+        letter-spacing: 0.1em;
+        -webkit-writing-mode: vertical-rl;
+        writing-mode: vertical-rl;
+
+        a {
+            text-decoration: none;
+            color:#ccd6f6;
+
+            &:hover {
+                color: #64ffda;
+            }  
+        }
+        &::after {
+            content: "";
+            display: block;
+            width: 1px;
+            height: 90px;
+            margin: 0px auto;
+            background-color: #a8b2d1;
+        }
     }
+    
 }
