@@ -1,4 +1,5 @@
 header {
+
     gap: 1rem;
     font-size: 1rem;
     display: flex;
@@ -12,12 +13,12 @@ header {
         list-style: none;
 
         li a {
-            color: #64ffda;
+            color: #ccd6f6;
             text-decoration: none;
             font-weight: bold; 
 
             &:hover {
-                color: #aca8ac;
+                color: #64ffda;
             }
           }
       }
