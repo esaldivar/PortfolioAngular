@@ -13,17 +13,26 @@ header {
         list-style: none;
         li {
             counter-increment: item 1;
+            transition-delay: 100ms;
+            
             a {
+                
                 font-family: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
                 font-size: 1rem;
                 color: #ccd6f6;
                 text-decoration: none;
                 font-weight: bold; 
-    
                 &:hover {
                     color: #64ffda;
                 }
+                &::before {
+                    content: "0" counter(item) ".";
+                    margin-right: 5px;
+                    color: #64ffda;
+                    text-align: right;
+                }
               }
+              
         } 
       }
   }
