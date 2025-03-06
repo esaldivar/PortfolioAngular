@@ -1,5 +1,15 @@
 <div id="left-side-bar">
     <div id="logo">
-        <img src="assets/logo.png" alt="Website logo, a server" />
+        <a href="/" aria-label="Home">
+            <img src="assets/logo.png" alt="Website logo, a server" />
+        </a>
+    </div>
+    <div id="social-links">
+        <ul *ngFor="let link of socialLinks">
+            <li>
+                <a [href]="link.url" target="_blank" rel="noopener noreferrer" [attr.aria-label]="link.name">
+                </a>
+            </li>        
+        </ul>
     </div>
 </div>
