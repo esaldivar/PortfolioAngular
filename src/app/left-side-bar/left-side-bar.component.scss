@@ -21,23 +21,36 @@
         height: 100%;
       }
       #social-links {
-        display: flex;
-        align-items: center;
         padding: 10px 0  0 0;
         font-family: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
         line-height: 18px;
         letter-spacing: 0.1em;
-        -webkit-writing-mode: vertical-rl;
-        writing-mode: vertical-rl;
 
-        a {
-            text-decoration: none;
-            color:#ccd6f6;
+        ul {
+            display: flex;
+            flex-direction: column;
+            column-gap: 2rem;
+            align-items: center;
+            list-style: none;
+            li {
+                margin-top: 2rem;
+                a {
+                    text-decoration: none;
+                    color:#ccd6f6;
+                    .icon {
+                        width: 1.5rem;
+                        height: 1.5rem;
+                        vertical-align: -0.125em;
+                      }
+                    &:hover {
+                        color: #64ffda;
+                    }  
+    
+                }
+            }
 
-            &:hover {
-                color: #64ffda;
-            }  
         }
+        
         &::after {
             content: "";
             display: block;
