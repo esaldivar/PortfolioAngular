@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "PortfolioSite": {
+    "portfolio-site": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -64,10 +64,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "PortfolioSite:build:production"
+              "buildTarget": "portfolio-site:build:production"
             },
             "development": {
-              "buildTarget": "PortfolioSite:build:development"
+              "buildTarget": "portfolio-site:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -98,8 +98,5 @@
         }
       }
     }
-  },
-  "cli": {
-    "analytics": "353f0216-1c6f-419b-b9c4-bc3c386c974e"
   }
 }
