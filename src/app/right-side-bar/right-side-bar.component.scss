@@ -38,8 +38,10 @@
             text-decoration: none;
             color:#ccd6f6;
 
-            &:hover {
+            &:hover, &:focus  {
                 color: #64ffda;
+                transform: translateY(-3px);
+                transition-delay: 100ms;
             }  
         }
         &::after {
