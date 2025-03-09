@@ -1,4 +1,4 @@
-@import 'colors.scss';
+@use 'colors' as *;
 
 $font-sans: 'Calibre', 'Inter', 'San Francisco', 'SF Pro Text', -apple-system, system-ui,
 sans-serif;

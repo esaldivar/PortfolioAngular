@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, isDevMode } from '@angular/core';
 import { ButtonComponent } from "../button/button.component";
 import { FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
+import emailjs from 'emailjs-com';
 
 @Component({
   selector: 'app-contact',
@@ -40,7 +41,26 @@ export class ContactComponent {
   sendEmail(e: Event) {
     e.preventDefault(); 
     if(this.emailForm.valid) {
-      this.thankYouMessage = true;
+      if(!isDevMode){
+        const templateParams = {
+          from_name: this.emailForm.value.name,
+          from_email: this.emailForm.value.email,
+          message: this.emailForm.value.message
+        }
+        emailjs.send(process.env["SERVICE_ID"] || '', process.env["SERVICE_TEMPLATE"] || '', templateParams).then(
+          (response) => {
+            console.log('SUCCESS!', response.status, response.text);
+            this.thankYouMessage = true;
+          },
+          (error) => {
+            console.log('FAILED...', error);
+          },
+        );
+      } else {
+        console.log('Email sent', this.emailForm.value);
+        this.thankYouMessage = true;
+      }
+       
     }
   }
 
