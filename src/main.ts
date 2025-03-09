@@ -5,8 +5,7 @@ import emailjs from 'emailjs-com';
 import { isDevMode } from '@angular/core';
 
 if(!isDevMode()) {
-  console.log("We are in production mode");
-  emailjs.init(process.env["EMAIL_JS"] || '');
+  emailjs.init(import.meta.env.NG_APP_EMAILJS_PUB);
 } 
 
 bootstrapApplication(AppComponent, appConfig)

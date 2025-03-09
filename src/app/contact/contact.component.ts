@@ -47,7 +47,9 @@ export class ContactComponent {
           from_email: this.emailForm.value.email,
           message: this.emailForm.value.message
         }
-        emailjs.send(process.env["SERVICE_ID"] || '', process.env["SERVICE_TEMPLATE"] || '', templateParams).then(
+        const serviceID = import.meta.env.NG_APP_SERVICE_ID;
+        const templateID = import.meta.env.NG_APP_SERVICE_TEMPLATE;
+        emailjs.send(serviceID, templateID, templateParams).then(
           (response) => {
             console.log('SUCCESS!', response.status, response.text);
             this.thankYouMessage = true;
