@@ -35,7 +35,7 @@ transform 0.22s cubic-bezier(0.215, 0.61, 0.355, 1) 0.12s;
 h2.title {
     color: $lightest-slate;
 }
-p {
+p, label {
     &.normal-text {
         color: $slate;
     }
@@ -43,3 +43,8 @@ p {
         color: $green;
     }
 }
+
+input, textarea {
+    background-color: $lightest-slate;
+}
+

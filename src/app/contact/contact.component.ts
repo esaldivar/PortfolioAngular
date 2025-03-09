@@ -9,4 +9,12 @@ import { ButtonComponent } from "../button/button.component";
 })
 export class ContactComponent {
 
+  showEmailForm = false;
+  
+  sendEmail(e: Event) {
+    e.preventDefault();
+    this.showEmailForm = true;
+    console.log("Sending email...");
+  }
+
 }

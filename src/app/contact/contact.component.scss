@@ -25,8 +25,33 @@ section {
             letter-spacing: 0.1em;
             text-align: center;
         }
-        #say-hi {
+        #say-hi, #email-form {
             margin-top: 2rem;
+        }
+        #email-form {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            width: 100%;
+            
+            button {
+                color: #64ffda;
+                background-color: transparent;
+                border: 1px solid #64ffda;
+                border-radius: 4px;
+                padding: 0.75rem 1rem;
+                font-family: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
+                line-height: 1;
+                text-decoration: none;
+                transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
+                font-size: 13px;
+        
+                &:hover, &:focus {
+                    outline: none;
+                    box-shadow: 3px 3px 0 0 #64ffda;
+                    transform: translate(-4px, -4px);
+                }
+            }
         }
     }
 
