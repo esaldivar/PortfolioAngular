@@ -1,20 +1,24 @@
 <section>
     <div>
-        <p id="want-to-chat" class="emphasized-text">Want to chat?</p>
-        <h2 class="title">Contact Me</h2>
-        <p class="normal-text">I am always opening to hearing about new opportunities.  If you have a question or just want to say hi, I will try to get back to you.</p>
-        @if(!displayForm) {
-            <app-button text="Say Hi" id="say-hi" (click)="showEmailForm($event)"></app-button>
+        @if(thankYouMessage) {
+            <p id="thank-you" class="emphasized-text">Thank you for reaching out!  I will get back to you as soon as I can.</p>
         } @else {
-            <form id="email-form" [formGroup]="emailForm"  (ngSubmit)="sendEmail($event)" novalidate>
-                <label class="emphasized-text" for="name">Name:</label>
-                <input type="text" id="name" name="name" formControlName="name"  required>
-                <label class="emphasized-text" for="email">Email:</label>
-                <input type="email" id="email" name="email" formControlName="email" required>
-                <label class="emphasized-text" for="message">Message:</label>
-                <textarea id="message" name="message" rows="5" formControlName="message"  required></textarea>
-                <button type="submit">Send</button>
-            </form>
-         }
+            <p id="want-to-chat" class="emphasized-text">Want to chat?</p>
+            <h2 class="title">Contact Me</h2>
+            <p class="normal-text">I am always opening to hearing about new opportunities.  If you have a question or just want to say hi, I will try to get back to you.</p>
+            @if(!displayForm) {
+                <app-button text="Say Hi" id="say-hi" (click)="showEmailForm($event)"></app-button>
+            } @else {
+                <form id="email-form" [formGroup]="emailForm"  (ngSubmit)="sendEmail($event)" novalidate>
+                    <label class="emphasized-text" for="name">Name:</label>
+                    <input type="text" id="name" name="name" formControlName="name"  required>
+                    <label class="emphasized-text" for="email">Email:</label>
+                    <input type="email" id="email" name="email" formControlName="email" required>
+                    <label class="emphasized-text" for="message">Message:</label>
+                    <textarea id="message" name="message" rows="5" formControlName="message"  required></textarea>
+                    <button type="submit">Send</button>
+                </form>
+             }
+        }
     </div>
 </section>

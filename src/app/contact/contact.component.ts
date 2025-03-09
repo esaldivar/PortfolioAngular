@@ -11,6 +11,7 @@ import { FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } 
 export class ContactComponent {
 
   displayForm= false;
+  thankYouMessage = false;
 
   name = new FormControl('',[
     Validators.required, Validators.minLength(2), Validators.pattern(/^[a-zA-Z\s]*$/)
@@ -39,7 +40,7 @@ export class ContactComponent {
   sendEmail(e: Event) {
     e.preventDefault(); 
     if(this.emailForm.valid) {
-      this.displayForm = false;
+      this.thankYouMessage = true;
     }
   }
 
