@@ -44,7 +44,7 @@ export class ContactComponent {
       if(!isDevMode()){
         const templateParams = {
           from_name: this.emailForm.value.name,
-          from_email: this.emailForm.value.email,
+          reply_to: this.emailForm.value.email,
           message: this.emailForm.value.message
         }
         const serviceID = import.meta.env.NG_APP_SERVICE_ID;
