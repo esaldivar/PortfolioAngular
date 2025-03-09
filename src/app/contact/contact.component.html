@@ -3,16 +3,16 @@
         <p id="want-to-chat" class="emphasized-text">Want to chat?</p>
         <h2 class="title">Contact Me</h2>
         <p class="normal-text">I am always opening to hearing about new opportunities.  If you have a question or just want to say hi, I will try to get back to you.</p>
-        @if(!showEmailForm) {
-            <app-button text="Say Hi" id="say-hi" (click)="sendEmail($event)"></app-button>
+        @if(!displayForm) {
+            <app-button text="Say Hi" id="say-hi" (click)="showEmailForm($event)"></app-button>
         } @else {
-            <form id="email-form" (submit)="sendEmail($event)">
+            <form id="email-form" (ngSubmit)="sendEmail()">
                 <label class="emphasized-text" for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
+                <input type="text" id="name" name="name" [(ngModel)]="emailDetails.name" required>
                 <label class="emphasized-text" for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
+                <input type="email" id="email" name="email" [(ngModel)]="emailDetails.email"  required email>
                 <label class="emphasized-text" for="message">Message:</label>
-                <textarea id="message" name="message" rows="5"  required></textarea>
+                <textarea id="message" name="message" rows="5" [(ngModel)]="emailDetails.message" required></textarea>
                 <button type="submit">Send</button>
             </form>
          }

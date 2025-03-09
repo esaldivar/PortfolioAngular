@@ -1,20 +1,30 @@
 import { Component } from '@angular/core';
 import { ButtonComponent } from "../button/button.component";
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-contact',
-  imports: [ButtonComponent],
+  imports: [ButtonComponent, FormsModule],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss'
 })
 export class ContactComponent {
 
-  showEmailForm = false;
-  
-  sendEmail(e: Event) {
+  displayForm= false;
+  emailDetails = {
+    name: '',
+    email: '',
+    message: ''
+  }
+
+  showEmailForm(e: Event) {
     e.preventDefault();
-    this.showEmailForm = true;
-    console.log("Sending email...");
+    this.displayForm = true;
+  }
+
+  sendEmail() { 
+    this.displayForm = false;
+
   }
 
 }
