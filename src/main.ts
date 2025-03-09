@@ -4,7 +4,8 @@ import { AppComponent } from './app/app.component';
 import emailjs from 'emailjs-com';
 import { isDevMode } from '@angular/core';
 
-if(!isDevMode ) {
+if(!isDevMode()) {
+  console.log("We are in production mode");
   emailjs.init(process.env["EMAIL_JS"] || '');
 } 
 

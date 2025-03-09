@@ -41,7 +41,7 @@ export class ContactComponent {
   sendEmail(e: Event) {
     e.preventDefault(); 
     if(this.emailForm.valid) {
-      if(!isDevMode){
+      if(!isDevMode()){
         const templateParams = {
           from_name: this.emailForm.value.name,
           from_email: this.emailForm.value.email,
