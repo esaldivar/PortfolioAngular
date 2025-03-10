@@ -1,6 +1,6 @@
 import { AfterViewInit, Component, ElementRef, isDevMode, ViewChild } from '@angular/core';
 import { ButtonComponent } from "../button/button.component";
-import { FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
+import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import emailjs from 'emailjs-com';
 import { CommonModule } from '@angular/common';
 import { sr } from '../../config';
@@ -38,42 +38,14 @@ export class ContactComponent implements AfterViewInit {
     message: this.message
   });
 
-
   ngAfterViewInit () {
-    this.observer = new IntersectionObserver(this.handleIntersection.bind(this), { threshold: 0 });
-    this.observer.observe(this.contact.nativeElement);
+    sr(this.contact);
   }
-
-  handleIntersection(entries: IntersectionObserverEntry[]) {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        sr(this.contact);
-        this.observer.unobserve(this.contact.nativeElement);
-      }
-    })};
 
   showEmailForm(e: Event) {
     e.preventDefault();
     this.displayForm = true;
   }
-
-  onMouseEnter(){
-    console.log('Mouse entered');
-  }
-
-  isElementVisible(element:HTMLElement) { 
-    const elementTop = element.offsetTop; 
-    const elementBottom = elementTop  
-        + element.offsetHeight; 
-    const viewportTop = window.pageYOffset; 
-    const viewportBottom = viewportTop  
-        + window.innerHeight; 
-
-    return ( 
-        elementBottom > viewportTop && 
-        elementTop < viewportBottom
-    ); 
-} 
 
   sendEmail(e: Event) {
     e.preventDefault(); 
