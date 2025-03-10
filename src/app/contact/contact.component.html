@@ -1,4 +1,4 @@
-<section>
+<section [ngClass]="{'dont-show': !show, 'show': show}" #contact>
     <div>
         @if(thankYouMessage) {
             <p id="thank-you" class="emphasized-text">Thank you for reaching out!  I will get back to you as soon as I can.</p>

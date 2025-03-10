@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { HeaderComponent } from "./header/header.component";
 import { LeftSideBarComponent } from "./left-side-bar/left-side-bar.component";
 import { RightSideBarComponent } from './right-side-bar/right-side-bar.component';
@@ -30,6 +30,8 @@ import { FooterComponent } from "./footer/footer.component";
     'class': 'app-root'
   }
 })
-export class AppComponent {
+export class AppComponent 
+{
   title = 'PortfolioSite';
+  
 }
