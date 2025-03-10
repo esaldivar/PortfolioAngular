@@ -3,6 +3,7 @@ import { ButtonComponent } from "../button/button.component";
 import { FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import emailjs from 'emailjs-com';
 import { CommonModule } from '@angular/common';
+import { sr } from '../../config';
 
 @Component({
   selector: 'app-contact',
@@ -43,15 +44,10 @@ export class ContactComponent implements AfterViewInit {
     this.observer.observe(this.contact.nativeElement);
   }
 
-  showElement() {
-    // Your code here
-    console.log('Div is visible!');
-    this.show = true;
-  }
   handleIntersection(entries: IntersectionObserverEntry[]) {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        this.showElement();
+        sr(this.contact);
         this.observer.unobserve(this.contact.nativeElement);
       }
     })};
