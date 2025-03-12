@@ -7,7 +7,9 @@
             <h2 class="title">Contact Me</h2>
             <p class="normal-text">I am always opening to hearing about new opportunities.  If you have a question or just want to say hi, I will try to get back to you.</p>
             @if(!displayForm) {
-                <app-button text="Say Hi" id="say-hi" (click)="showEmailForm($event)"></app-button>
+                <div>
+                    <a id="say-hi" (click)="showEmailForm($event)">Say Hi</a>
+                </div>
             } @else {
                 <form id="email-form" [formGroup]="emailForm"  (ngSubmit)="sendEmail($event)" novalidate>
                     <label class="emphasized-text" for="name">Name:</label>
@@ -16,7 +18,7 @@
                     <input type="email" id="email" name="email" formControlName="email" required>
                     <label class="emphasized-text" for="message">Message:</label>
                     <textarea id="message" name="message" rows="5" formControlName="message"  required></textarea>
-                    <button type="submit">Send</button>
+                    <button id="send-form"type="submit">Send</button>
                 </form>
              }
         }
