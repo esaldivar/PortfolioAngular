@@ -1,0 +1,19 @@
+footer {
+      #built-by{
+        p > a {
+            padding: 10px;
+            color: #a8b2d1;
+            text-decoration: none;
+            font-weight: bold;
+            font-family: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
+            font-size: 0.75rem;
+            color: #ccd6f6;
+            text-decoration: none;
+            font-weight: bold;
+            text-decoration-skip-ink: auto;
+            &:hover {
+                color: #64ffda;
+            }
+        }
+    }
+}
