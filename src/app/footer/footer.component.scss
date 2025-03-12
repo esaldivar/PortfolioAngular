@@ -3,9 +3,13 @@ footer {
     flex-direction: column;
     gap: 1rem;
     
-    #built-by{
+    .built-by{
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-self: center;
+        gap: 0.5rem;
         p > a {
-            padding: 10px;
             color: #a8b2d1;
             text-decoration: none;
             font-weight: bold;

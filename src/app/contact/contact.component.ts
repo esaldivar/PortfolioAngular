@@ -1,14 +1,12 @@
 import { AfterViewInit, Component, ElementRef, isDevMode, ViewChild } from '@angular/core';
-import { ButtonComponent } from "../button/button.component";
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-import emailjs from 'emailjs-com';
 import { CommonModule } from '@angular/common';
 import { sr } from '../../config';
 import { ContactService } from './contact.service';
 
 @Component({
   selector: 'app-contact',
-  imports: [ButtonComponent, ReactiveFormsModule, CommonModule],
+  imports: [ReactiveFormsModule, CommonModule],
   providers: [ContactService],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss'

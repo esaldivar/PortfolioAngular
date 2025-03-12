@@ -9,21 +9,24 @@ import { ProjectsComponent } from "./projects/projects.component";
 import { PodcastComponent } from "./podcast/podcast.component";
 import { IntroductionComponent } from "./introduction/introduction.component";
 import { FooterComponent } from "./footer/footer.component";
+import { AvatarComponent } from "./avatar/avatar.component";
 
 @Component({
   selector: 'app-root',
   imports: [
+    AvatarComponent,
     HeaderComponent,
     LeftSideBarComponent,
     RightSideBarComponent,
     WorkExperienceComponent,
     AboutMeComponent,
     ContactComponent,
-    ProjectsComponent, 
-    PodcastComponent, 
-    IntroductionComponent, 
-    FooterComponent
-  ],
+    ProjectsComponent,
+    PodcastComponent,
+    IntroductionComponent,
+    FooterComponent,
+    AvatarComponent
+],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
   host: {

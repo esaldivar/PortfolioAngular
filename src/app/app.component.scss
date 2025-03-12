@@ -1,4 +1,6 @@
-
+#avatar {
+    display: none;
+}
 #leftColumn, #rightColumn {
     width: 10%;
     margin: 0;
@@ -30,6 +32,10 @@
 }   
 
 @media (max-width: 768px) {
+    #avatar {
+        display: flex;
+        justify-content: center;
+    }
     #leftColumn, #rightColumn {
         display: none;
     
@@ -37,7 +43,7 @@
     #middleColumn {
         width: 100%;
         .content {
-            margin-top: 10rem;
+            margin-top: 2rem;
             display: flex;
             flex-direction: column;
             justify-content: center;
