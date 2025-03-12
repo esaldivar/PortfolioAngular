@@ -49,11 +49,11 @@ export class ContactComponent implements AfterViewInit {
     this.displayForm = true;
   }
 
-  sendEmail(e: Event) {
+  async sendEmail(e: Event) {
     e.preventDefault(); 
     if(this.emailForm.valid) {
       if(!isDevMode()){
-        this.thankYouMessage = this.contactService.sendEmail(this.emailForm);
+        this.thankYouMessage = await this.contactService.sendEmail(this.emailForm);
       } else {
         console.log('Email sent', this.emailForm.value);
         this.thankYouMessage = true;

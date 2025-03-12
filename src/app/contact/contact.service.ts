@@ -11,21 +11,22 @@ interface ContactForm {
     serviceID = import.meta.env.NG_APP_SERVICE_ID;
     templateID = import.meta.env.NG_APP_SERVICE_TEMPLATE;
 
-    sendEmail(form: FormGroup<ContactForm>): boolean {
+    async sendEmail(form: FormGroup<ContactForm>): Promise<boolean> {
         const templateParams = {
             from_name: form.get('name')?.value,
             email: form.get('email')?.value,
             message: form.get('message')?.value
           }
-        emailjs.send(this.serviceID, this.templateID, templateParams).then(
+          
+        return await emailjs.send(this.serviceID, this.templateID, templateParams).then(
             (response) => {
               console.log('SUCCESS!', response.status, response.text);
               return true;
             },
             (error) => {
               console.log('FAILED...', error);
+              return false;
             },
           );
-          return false;
     }
   }
