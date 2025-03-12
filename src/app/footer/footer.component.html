@@ -1,8 +1,19 @@
 <footer>
-    <div class="mobileSocialLinks">
-
+    <div id="mobileSocialLinks">
+        <ul *ngFor="let link of socialLinks">
+            <li>
+                <a [href]="link.url" target="_blank" rel="noopener noreferrer" [attr.aria-label]="link.name">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" aria-hidden="true" focusable="false" viewBox="0 0 512 512">
+                        <path
+                          fill="currentColor"
+                          [attr.d]="link.path"
+                        />
+                      </svg>                
+                </a>
+            </li>        
+        </ul>
     </div>
     <div id="built-by">
-        <p><a href="https://github.com/esaldivar/PortfolioAngular/" target="_blank">Built by Eric Saldivar</a></p>
+        <p><a href="https://github.com/esaldivar/PortfolioAngular/" target="_blank">Designed and Built by Eric Saldivar</a></p>
     </div>
 </footer>
