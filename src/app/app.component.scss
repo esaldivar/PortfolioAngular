@@ -29,3 +29,21 @@
     }
 }   
 
+@media (max-width: 768px) {
+    #leftColumn, #rightColumn {
+        display: none;
+    
+    }
+    #middleColumn {
+        width: 100%;
+        .content {
+            margin-top: 10rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 5rem;
+            padding: 0;
+        }
+    }
+  }
