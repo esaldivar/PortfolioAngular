@@ -4,16 +4,18 @@ import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angula
 import emailjs from 'emailjs-com';
 import { CommonModule } from '@angular/common';
 import { sr } from '../../config';
+import { ContactService } from './contact.service';
 
 @Component({
   selector: 'app-contact',
   imports: [ButtonComponent, ReactiveFormsModule, CommonModule],
+  providers: [ContactService],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss'
 })
 export class ContactComponent implements AfterViewInit {
+  constructor(private contactService: ContactService) { }
   @ViewChild('contact') contact!: ElementRef;
-  observer!: IntersectionObserver;
   show = false;
 
   displayForm= false;
@@ -51,22 +53,7 @@ export class ContactComponent implements AfterViewInit {
     e.preventDefault(); 
     if(this.emailForm.valid) {
       if(!isDevMode()){
-        const templateParams = {
-          from_name: this.emailForm.value.name,
-          reply_to: this.emailForm.value.email,
-          message: this.emailForm.value.message
-        }
-        const serviceID = import.meta.env.NG_APP_SERVICE_ID;
-        const templateID = import.meta.env.NG_APP_SERVICE_TEMPLATE;
-        emailjs.send(serviceID, templateID, templateParams).then(
-          (response) => {
-            console.log('SUCCESS!', response.status, response.text);
-            this.thankYouMessage = true;
-          },
-          (error) => {
-            console.log('FAILED...', error);
-          },
-        );
+        this.thankYouMessage = this.contactService.sendEmail(this.emailForm);
       } else {
         console.log('Email sent', this.emailForm.value);
         this.thankYouMessage = true;
