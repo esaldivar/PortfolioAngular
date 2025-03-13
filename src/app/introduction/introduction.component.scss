@@ -1,0 +1,10 @@
+section#intro-section {
+    #name-is {
+        margin: 0px 0px 30px 4px;
+        color: var(--green);
+        font-family: var(--font-mono);
+        font-size: clamp(var(--fz-sm),5vw,var(--fz-md));
+        font-weight: 400;
+    }
+    
+}
