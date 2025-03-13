@@ -1,4 +1,4 @@
-@use 'colors' as *;
+@import './colors.scss';
 
 $font-sans: 'Calibre', 'Inter', 'San Francisco', 'SF Pro Text', -apple-system, system-ui,
 sans-serif;
@@ -43,7 +43,21 @@ p, label {
         color: $green;
     }
 }
-
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0 0 10px 0;
+  font-weight: 600;
+  color: $lightest-slate;
+  line-height: 1.1;
+}
+a {
+    text-decoration-skip-ink: auto;
+    text-decoration: none;
+}
 input, textarea {
     background-color: $lightest-slate;
 }

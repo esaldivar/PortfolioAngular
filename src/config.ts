@@ -17,6 +17,6 @@ export const srConfig = (delay = 200, viewFactor = 0.25) => ({
     viewOffset: { top: 0, right: 0, bottom: 0, left: 0 },
   });
 
-  export const sr = (element:ElementRef) => {
-    return ScrollReveal().reveal(element.nativeElement, srConfig());
+  export const sr = (element:ElementRef, options?: scrollReveal.ScrollRevealObjectOptions) => {
+    return ScrollReveal().reveal(element.nativeElement, options ?? srConfig());
 }

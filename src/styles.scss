@@ -1,5 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
-@use 'styles/globals.scss' as *;  
+@import './styles/globals.scss'; 
 
 * {
     background-color: #0a192f;
