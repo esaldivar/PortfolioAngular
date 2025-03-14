@@ -1,0 +1,72 @@
+@import '../../styles/colors.scss';
+@import '../../styles/globals.scss';
+
+section#about {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    h2.numbered-heading {
+        display: flex;
+        -webkit-box-align: center;
+        align-items: center;
+        position: relative;
+        margin: 10px 0px 40px;
+        width: 100%;
+        font-size: clamp(26px, 5vw, $fz-heading);
+        white-space: nowrap;
+        span {
+            color: $green;
+            margin-right: 1rem;
+        }
+        &::after {
+            content: "";
+            display: flex;
+            margin-top: 5px;
+            width: 15rem;
+            height: 0.063rem;
+            margin-left: 20px;
+            background-color: $lightest-navy;
+        }
+    }
+
+    div.inner {
+        display: flex;
+
+         > div#left-section {
+            div#summary {
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+                width: 80%;
+    
+            }        
+            ul{
+                display: grid;
+                grid-template-columns: repeat(2, minmax(140px, 200px));
+                gap: 0px 10px;
+                padding: 0px;
+                margin: 20px 0px 0px;
+                overflow: hidden;
+                list-style: none;
+                list-style-type: none;
+                 li {
+                    position: relative;
+                    margin-bottom: 10px;
+                    padding-left: 20px;
+                    font-family: var(--font-mono);
+                    font-size: $fz-xs;
+                    &::before {
+                        content: "▹";
+                        position: absolute;
+                        left: 0px;
+                        color: $green;
+                        font-size: $fz-sm;
+                        line-height: 12px;
+                    }
+                 }
+            }
+        }
+
+
+    }
+}
