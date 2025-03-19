@@ -1,5 +1,5 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
-import { sr, srConfig } from '../../config';
+import { Configuration } from '../../utils/config';
 
 @Component({
   selector: 'app-introduction',
@@ -9,8 +9,9 @@ import { sr, srConfig } from '../../config';
 })
 export class IntroductionComponent {
   @ViewChild('introduction') introduction!: ElementRef;
-  
+  config = new Configuration();
+
   ngAfterViewInit () {
-      sr(this.introduction);
+      this.config.sr(this.introduction);
     }
 }

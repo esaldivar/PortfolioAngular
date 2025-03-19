@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { SocialLink, Config } from '../../utils/config';
+import { Configuration, SocialLink } from '../../utils/config';
 import { AvatarComponent } from "../avatar/avatar.component";
 
 
@@ -12,5 +12,5 @@ import { AvatarComponent } from "../avatar/avatar.component";
 })
 export class LeftSideBarComponent {
 
-  socialLinks: SocialLink[] =  Config.socials;
+  socialLinks: SocialLink[] = Configuration.socials;
 }

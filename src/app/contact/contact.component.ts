@@ -1,8 +1,8 @@
 import { AfterViewInit, Component, ElementRef, isDevMode, ViewChild } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import { sr } from '../../config';
 import { ContactService } from './contact.service';
+import { Configuration } from '../../utils/config';
 
 @Component({
   selector: 'app-contact',
@@ -15,6 +15,7 @@ export class ContactComponent implements AfterViewInit {
   constructor(private contactService: ContactService) { }
   @ViewChild('contact') contact!: ElementRef;
   show = false;
+  config = new Configuration();
 
   displayForm= false;
   thankYouMessage = false;
@@ -39,7 +40,7 @@ export class ContactComponent implements AfterViewInit {
   });
 
   ngAfterViewInit () {
-    sr(this.contact);
+    this.config.sr(this.contact);
   }
 
   showEmailForm(e: Event) {
