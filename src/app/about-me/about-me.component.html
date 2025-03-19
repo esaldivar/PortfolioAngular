@@ -31,6 +31,20 @@
                     <div id="presentation-filter" aria-hidden="true" data-placeholder-image="">
                     </div>
                     <picture>
+                        <source 
+                            type="image/avif" 
+                            srcset="500.jpg 125w,
+                            500.jpg 250w,
+                            500.jpg 500w" 
+                            sizes="(min-width: 500px) 500px, 100vw"
+                        >
+                        <source 
+                            type="image/webp" 
+                            srcset="500.jpg 125w,
+                            500.jpg 250w,
+                            500.jpg 500w" 
+                            sizes="(min-width: 500px) 500px, 100vw"
+                        >
                         <img 
                             width="500" 
                             height="500" 
@@ -42,10 +56,9 @@
                             500.jpg 250w,
                             500.jpg 500w" 
                             alt="Headshot" 
+                            style="object-fit: cover; opacity: 1;"
                         >
                     </picture>
-                    <noscript>    
-                    </noscript>
                 </div>
             </div>
         </div>
