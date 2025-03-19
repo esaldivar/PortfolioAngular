@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { SocialLink, Config } from '../../utils/config';
+import { SocialLink, Configuration } from '../../utils/config';
 
 @Component({
   selector: 'app-footer',
@@ -9,5 +9,5 @@ import { SocialLink, Config } from '../../utils/config';
   styleUrl: './footer.component.scss'
 })
 export class FooterComponent {
-socialLinks: SocialLink[] =  Config.socials;
+socialLinks: SocialLink[] =  Configuration.socials;
 }
