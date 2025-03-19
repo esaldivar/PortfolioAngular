@@ -15,16 +15,19 @@ section#intro-section {
     h2 {
         font-weight: 600;
         font-size: 5rem;
+        font-family: $font-sans;
         color: $lightest-slate;
         line-height: 1.1;
     }
     h3 {
         color: $slate;
         font-size: 5rem;
+        font-family: $font-sans;
     }
     div#what-i-do {
         width: 65%;
         p {
+            font-family: $font-sans;
             font-size: 1.25rem;
             color: $slate;
             line-height: 2rem;
