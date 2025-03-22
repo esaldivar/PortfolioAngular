@@ -180,7 +180,10 @@ section#about {
 @media (max-width: 768px) {
     section#about {
         h2.numbered-heading {
-            padding-left: 4rem;
+            padding-left: 1rem;
+            &::after {
+                width: 7rem;
+            }
         }
     
         div.inner {
@@ -191,20 +194,20 @@ section#about {
              > div#left-section {
                 div#summary {
                     gap: 1rem;
-                    padding: 0 4rem;
+                    padding: 0 1rem;
                     p {
                         font-size: $fz-lg;
                     }
                 }        
                 ul{
-                    padding: 0 4rem;
+                    padding: 0 1rem;
                     li {
                         font-size: $fz-lg;
                     }
                 }
             }
             div#right-section {
-                margin-left: 6rem;
+                margin-left: 2rem;
                 position: relative;
             }   
         }
