@@ -11,6 +11,7 @@ export class AboutMeComponent implements AfterViewInit {
   @ViewChild('about') about!: ElementRef;
   config = new Configuration();
   
+  
   ngAfterViewInit () {
     this.config.sr(this.about);
   }
