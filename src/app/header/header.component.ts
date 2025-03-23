@@ -1,4 +1,4 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
 import { Configuration } from '../../utils/config';
 
 @Component({
@@ -7,7 +7,7 @@ import { Configuration } from '../../utils/config';
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
-export class HeaderComponent {
+export class HeaderComponent implements AfterViewInit {
   @ViewChild('about') about!: ElementRef;
   @ViewChild('experience') experience!: ElementRef;
   @ViewChild('projects') projects!: ElementRef;
@@ -20,7 +20,7 @@ export class HeaderComponent {
     const options = {
       ...this.config.srConfig(),
       origin: 'top',
-      distance: '50px',
+      distance: '50px'
     }
     this.config.sr(this.about, {...options, delay: 200});
     this.config.sr(this.experience, {...options, delay: 400});
