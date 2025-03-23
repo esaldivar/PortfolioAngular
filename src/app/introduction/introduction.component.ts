@@ -13,7 +13,11 @@ export class IntroductionComponent implements AfterViewInit{
   
   
   ngAfterViewInit () {
-    this.config.sr(this.introduction);
+    const options = {
+      ...this.config.srConfig(),
+      delay: 2000
+    }
+    this.config.sr(this.introduction, options);
   }
   
 }

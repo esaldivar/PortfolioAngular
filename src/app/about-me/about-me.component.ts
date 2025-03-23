@@ -13,7 +13,11 @@ export class AboutMeComponent implements AfterViewInit {
   
   
   ngAfterViewInit () {
-    this.config.sr(this.about);
+    const options = {
+      ...this.config.srConfig(),
+      delay: 2500
+    }
+    this.config.sr(this.about, options);
   }
   
 }
