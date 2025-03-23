@@ -58,11 +58,15 @@ export class ContactComponent implements AfterViewInit {
     if(this.emailForm.valid) {
       if(!isDevMode()){
         this.thankYouMessage = await this.contactService.sendEmail(this.emailForm);
-        this.showSuccess(template);
+        if(this.thankYouMessage){
+          this.showSuccess(template);
+        }
       } else {
         console.log('Email sent', this.emailForm.value);
         this.thankYouMessage = true;
-        this.showSuccess(template);
+        if(this.thankYouMessage){
+          this.showSuccess(template);
+        }
       }
        
     }
