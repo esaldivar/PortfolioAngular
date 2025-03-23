@@ -21,4 +21,5 @@ export class AvatarComponent {
 
     this.config.sr(this.logo, options);
   }
+  
 }

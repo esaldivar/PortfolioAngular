@@ -1,3 +1,8 @@
+<ng-template #successTpl>
+    <div id="success-toast">
+        Message sent successfully! 
+    </div>
+</ng-template>
 <section #contact>
     <div>
         @if(thankYouMessage) {
@@ -14,7 +19,7 @@
                     <a id="say-hi" href="mailto:esaldivar1214@gmail.com" rel="noopener noreferrer" target="_blank">Say Hi</a>
                 </div>
             } @else {
-                <form id="email-form" [formGroup]="emailForm"  (ngSubmit)="sendEmail($event)" novalidate>
+                <form id="email-form" [formGroup]="emailForm"  (ngSubmit)="sendEmail($event, successTpl)" novalidate>
                     <label class="emphasized-text" for="name">Name:</label>
                     <input type="text" id="name" name="name" formControlName="name"  required>
                     <label class="emphasized-text" for="email">Email:</label>

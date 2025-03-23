@@ -10,6 +10,7 @@ import { PodcastComponent } from "./podcast/podcast.component";
 import { IntroductionComponent } from "./introduction/introduction.component";
 import { FooterComponent } from "./footer/footer.component";
 import { AvatarComponent } from "./avatar/avatar.component";
+import { ToastsComponent } from './toasts/toasts.component';
 
 @Component({
   selector: 'app-root',
@@ -25,7 +26,8 @@ import { AvatarComponent } from "./avatar/avatar.component";
     PodcastComponent,
     IntroductionComponent,
     FooterComponent,
-    AvatarComponent
+    AvatarComponent,
+    ToastsComponent
 ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
