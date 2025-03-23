@@ -1,6 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 @import './styles/globals.scss'; 
-
+@import "../node_modules/bootstrap/scss/bootstrap";
 * {
     background-color: #0a192f;
     margin: 0;
@@ -34,4 +34,8 @@ body {
     display: flex;
     flex-direction: row;
     height: 100vh;
+  }
+
+  .offcanvas.offcanvas-end {
+    width: 80% !important;
   }

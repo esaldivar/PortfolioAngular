@@ -45,6 +45,20 @@ header {
   }
 
 @media (max-width: 768px) {
+  .offcanvas-header {
+    display: flex;
+    justify-content: flex-end;
+    button#aside-close {
+      border: none;
+      font-size: 1rem;
+      padding: 1rem;
+      color: #64ffda !important;
+    }
+    .offcanvas-body {
+      width: 80% !important;
+    }
+
+  }
   header {
     width: 100%;
     nav ol {

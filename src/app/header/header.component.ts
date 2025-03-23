@@ -1,13 +1,16 @@
-import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, TemplateRef, ViewChild, ViewEncapsulation } from '@angular/core';
 import { Configuration } from '../../utils/config';
+import { NgbOffcanvas } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-header',
   imports: [],
   templateUrl: './header.component.html',
-  styleUrl: './header.component.scss'
+  styleUrl: './header.component.scss',
+	encapsulation: ViewEncapsulation.None,
 })
 export class HeaderComponent implements AfterViewInit {
+  constructor(private offCanvasService: NgbOffcanvas){}
   @ViewChild('about') about!: ElementRef;
   @ViewChild('experience') experience!: ElementRef;
   @ViewChild('projects') projects!: ElementRef;
@@ -29,4 +32,8 @@ export class HeaderComponent implements AfterViewInit {
     this.config.sr(this.contact, {...options, delay: 1000});
 
   }
+
+  openRight(content: TemplateRef<any>) {
+		this.offCanvasService.open(content, { position: 'end', backdrop: 'static' });
+	}
 }
