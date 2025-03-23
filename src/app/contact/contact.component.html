@@ -7,8 +7,11 @@
             <h2 class="title">Contact Me</h2>
             <p class="normal-text">I am always opening to hearing about new opportunities.  If you have a question or just want to say hi, I will try to get back to you.</p>
             @if(!displayForm) {
-                <div>
+                <div id="desktopContact">
                     <a id="say-hi" (click)="showEmailForm($event)">Say Hi</a>
+                </div>
+                <div id="mobileContact">
+                    <a id="say-hi" href="mailto:esaldivar1214@gmail.com" rel="noopener noreferrer" target="_blank">Say Hi</a>
                 </div>
             } @else {
                 <form id="email-form" [formGroup]="emailForm"  (ngSubmit)="sendEmail($event)" novalidate>

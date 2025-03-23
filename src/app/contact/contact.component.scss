@@ -25,6 +25,9 @@ section {
             letter-spacing: 0.1em;
             text-align: center;
         }
+        #mobileContact{
+            display: none;
+        }
         #say-hi, #email-form {
             margin-top: 2rem;
         }
@@ -61,6 +64,12 @@ section {
     section {
         div {
             width: 80%;
+            #desktopContact {
+                display: none;
+            }
+            #mobileContact{
+                display: flex;
+            }
         }
     }
 }
