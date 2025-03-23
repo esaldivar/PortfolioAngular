@@ -28,6 +28,9 @@ header {
               
         } 
       }
+    div#mobile-nav {
+      display: none;
+    }
   }
   
   @media (min-width: 769px) {
@@ -41,8 +44,27 @@ header {
     }
   }
 
-  @media (max-width: 768px) {
-    header {
-      display: none;
+@media (max-width: 768px) {
+  header {
+    width: 100%;
+    nav ol {
+      &#desktop-nav-list {
+        display: none
+      }
+    }
+    div#mobile-nav {
+      display: flex;
+      justify-content: flex-end;
+      padding: 1rem;
+      button {
+        border: none;
+        fill:#64ffda;
+        svg.icon {
+          width: 1.5rem;
+          height: 1.5rem;
+        }
+      }
+      
     }
   }
+}

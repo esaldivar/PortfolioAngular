@@ -5,6 +5,7 @@ section#about {
     display: flex;
     flex-direction: column;
     width: 100%;
+    font-family: $font-sans;
     h2.numbered-heading {
         display: flex;
         -webkit-box-align: center;

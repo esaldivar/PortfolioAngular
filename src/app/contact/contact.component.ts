@@ -2,8 +2,8 @@ import { AfterViewInit, Component, ElementRef, isDevMode, TemplateRef, ViewChild
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { ContactService } from './contact.service';
-import { Configuration } from '../../utils/config';
 import { AppToastService } from '../toasts/toasts.service';
+import { Configuration } from '../../utils/config';
 
 @Component({
   selector: 'app-contact',
