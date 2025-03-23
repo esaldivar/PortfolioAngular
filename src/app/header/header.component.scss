@@ -45,20 +45,56 @@ header {
   }
 
 @media (max-width: 768px) {
-  .offcanvas-header {
+  div#aside-container {
     display: flex;
-    justify-content: flex-end;
-    button#aside-close {
-      border: none;
-      font-size: 1rem;
-      padding: 1rem;
-      color: #64ffda !important;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    gap: 5rem;
+    .offcanvas-header {
+      display: flex;
+      justify-content: flex-end;
+      button#aside-close {
+        border: none;
+        font-size: 1rem;
+        padding: 1rem;
+        color: #64ffda !important;
+      }
     }
     .offcanvas-body {
-      width: 80% !important;
+      ol#mobile-nav-list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 3rem;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        li {
+            counter-increment: item 1;
+            a {
+                
+                font-family: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
+                font-size: 1rem;
+                color: #ccd6f6;
+                text-decoration: none;
+                font-weight: bold; 
+                &:hover {
+                    color: #64ffda;
+                }
+                &::before {
+                    content: "0" counter(item) ".";
+                    margin-right: 5px;
+                    color: #64ffda;
+                    text-align: right;
+                }
+              }
+            }
+          }
     }
-
   }
+  
+
   header {
     width: 100%;
     nav ol {
