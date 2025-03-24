@@ -6,20 +6,19 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
     height: 100vh;
     position: fixed;
+    width: 10%;
 
       #social-links {
-        padding: 10px 0  0 0;
+
         font-family: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
         line-height: 18px;
         letter-spacing: 0.1em;
-
         ul {
-            display: flex;
-            flex-direction: column;
+            padding-left: 0;
             column-gap: 2rem;
-            align-items: center;
             list-style: none;
             li {
                 margin-top: 2rem;
