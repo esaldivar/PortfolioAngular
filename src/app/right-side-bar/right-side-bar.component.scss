@@ -5,10 +5,10 @@
     justify-content: space-between;
     height: 100vh;
     position: fixed;
-    padding: 1.5rem 0;
     width: 100%;
 
-     > div {
+     > div#resume {
+        margin-top: 1.5rem;
         display: flex;
         justify-content: center;
         width: 10%;
@@ -34,7 +34,6 @@
     .email-section {
         display: flex;
         align-items: center;
-        padding: 10px;
         font-family: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
         line-height: 18px;
         letter-spacing: 0.1em;
