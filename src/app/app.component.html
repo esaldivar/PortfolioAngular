@@ -2,8 +2,8 @@
 <!--header -->
 
 <app-left-side-bar id="leftColumn"/>
-<div id="middleColumn">
-  <app-header id="app-header"/>
+<div id="middleColumn" [class.blur]="blur">
+  <app-header id="app-header" (blurBackground)="handlemobileAsideBlur($event)"/>
   <app-avatar id="avatar"/>
   <main>
     <div class="content">

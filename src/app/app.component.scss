@@ -10,6 +10,9 @@
 #middleColumn {
     width: 80%;
     margin: 0;
+    &.blur {
+        filter: blur(4px);
+    }
     #app-header {
         width: 80%;
     }

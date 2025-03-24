@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef, TemplateRef, ViewChild, ViewEncapsulation } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, EventEmitter, Output, TemplateRef, ViewChild, ViewEncapsulation } from '@angular/core';
 import { Configuration } from '../../utils/config';
 import { NgbOffcanvas } from '@ng-bootstrap/ng-bootstrap';
 
@@ -16,6 +16,7 @@ export class HeaderComponent implements AfterViewInit {
   @ViewChild('projects') projects!: ElementRef;
   @ViewChild('podcast') podcast!: ElementRef;
   @ViewChild('contact') contact!: ElementRef;
+  @Output() blurBackground = new EventEmitter<boolean>(false);
   email = 'esaldivar1214@gmail.com';
   config = new Configuration();
        
@@ -34,6 +35,12 @@ export class HeaderComponent implements AfterViewInit {
   }
 
   openRight(content: TemplateRef<any>) {
-		this.offCanvasService.open(content, { position: 'end', backdrop: 'static' });
+		this.offCanvasService.open(content, { position: 'end' });
+    this.blurBackground.emit(true);
 	}
+
+  closeRight(){
+		this.offCanvasService.dismiss('Cross click');
+    this.blurBackground.emit(false);
+  }
 }

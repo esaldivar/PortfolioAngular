@@ -11,6 +11,7 @@ import { IntroductionComponent } from "./introduction/introduction.component";
 import { FooterComponent } from "./footer/footer.component";
 import { AvatarComponent } from "./avatar/avatar.component";
 import { ToastsComponent } from './toasts/toasts.component';
+import { NgbOffcanvas, NgbOffcanvasRef } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-root',
@@ -38,5 +39,22 @@ import { ToastsComponent } from './toasts/toasts.component';
 export class AppComponent 
 {
   title = 'PortfolioSite';
+  blur = false;
+  $openCanvas: any;
+
+  constructor(private offCanvasService: NgbOffcanvas) {
+    this.$openCanvas = this.offCanvasService.activeInstance.subscribe({
+      next: (rslt: NgbOffcanvasRef) => {
+        if(rslt.dismissed){
+          rslt.dismissed.subscribe(() => {
+            this.blur = false;
+          });
+        }
+      }
+    });
+  }
+  handlemobileAsideBlur(blurBackground: boolean) {
+    this.blur = blurBackground;
+  }
   
 }

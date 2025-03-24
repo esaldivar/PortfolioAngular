@@ -16,8 +16,10 @@ section#about {
         font-size: clamp(26px, 5vw, $fz-heading);
         white-space: nowrap;
         span {
+            font-family: $font-mono;
             color: $green;
             margin-right: 1rem;
+            font-weight: 400;
         }
         &::after {
             content: "";

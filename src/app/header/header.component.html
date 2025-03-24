@@ -1,24 +1,24 @@
 <ng-template #content let-offcanvas>
   <div id="aside-container">
     <div class="offcanvas-header">
-      <button id="aside-close" type="button" aria-label="Close" (click)="offcanvas.dismiss('Cross click')">X</button>
+      <button id="aside-close" type="button" aria-label="Close" (click)="closeRight()">X</button>
     </div>
     <div class="offcanvas-body">
       <ol id="mobile-nav-list">
         <li>
-          <a href="/#about" (click)="offcanvas.dismiss('Cross click')">About</a>
+          <a href="/#about" (click)="closeRight()">About</a>
         </li>
         <li>
-          <a href="/#experience" (click)="offcanvas.dismiss('Cross click')">Experience</a>
+          <a href="/#experience" (click)="closeRight()">Experience</a>
         </li>
         <li>
-          <a href="/#work" (click)="offcanvas.dismiss('Cross click')">Work</a>
+          <a href="/#work" (click)="closeRight()">Work</a>
         </li>
         <li>
-          <a href="/#podcast" (click)="offcanvas.dismiss('Cross click')">Podcast</a>
+          <a href="/#podcast" (click)="closeRight()">Podcast</a>
         </li>
         <li>
-          <a href="/#contact" (click)="offcanvas.dismiss('Cross click')">Contact</a>
+          <a href="/#contact" (click)="closeRight()">Contact</a>
         </li>
       </ol>
     </div>
