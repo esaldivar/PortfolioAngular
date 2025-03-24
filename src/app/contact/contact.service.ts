@@ -7,9 +7,11 @@ interface ContactForm {
     message: FormControl<string | null>
 }
   export class ContactService {
-    
-    serviceID = import.meta.env.NG_APP_SERVICE_ID;
-    templateID = import.meta.env.NG_APP_SERVICE_TEMPLATE;
+    isMobile = () => {
+      return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    }
+    serviceID = this.isMobile()  ?  '' : import.meta.env.NG_APP_SERVICE_ID;
+    templateID = this.isMobile() ?  '' : import.meta.env.NG_APP_SERVICE_TEMPLATE;
 
     async sendEmail(form: FormGroup<ContactForm>): Promise<boolean> {
         const templateParams = {
