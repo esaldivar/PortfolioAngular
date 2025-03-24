@@ -31,7 +31,7 @@ export class Configuration {
         opacity: 0,
         scale: 1,
         easing: 'cubic-bezier(0.645, 0.045, 0.355, 1)',
-        mobile: true,
+        mobile: false,
         reset: false,
         useDelay: 'always',
         viewFactor,
