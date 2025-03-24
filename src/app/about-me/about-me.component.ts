@@ -14,7 +14,8 @@ export class AboutMeComponent implements AfterViewInit {
   ngAfterViewInit () {
     const options = {
       ...this.config.srConfig(),
-      delay: 2500
+      delay: 2500,
+      viewFactor: 0
     }
     this.config.sr(this.about, options);
   }
