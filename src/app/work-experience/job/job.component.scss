@@ -37,7 +37,7 @@ div.job-panel {
         margin-bottom: 25px;
         color: $light-slate;
         font-family: $font-mono;
-        font-size: $fz-sm;
+        font-size: $fz-md;
     }
     ul {
         list-style: none;
@@ -45,7 +45,7 @@ div.job-panel {
             padding-left: 30px;
             position: relative;
             color: $light-slate;
-            font-size: $fz-md;
+            font-size: $fz-lg;
             font-family: $font-sans;
             margin-bottom: 1rem;
             &::before {
