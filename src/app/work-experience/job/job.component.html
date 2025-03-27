@@ -1,9 +1,9 @@
 <div class="job-panel">
     <h3><span id="title">{{jobDetails.title}}</span><span class="company">&nbsp;&#64;&nbsp;</span><a class="company" [href]="jobDetails.companyUrl" rel="noopener noreferrer" target="_blank">{{jobDetails.company}}</a></h3>
-    <p>{{jobDetails.range}}</p>
+    <p class="range">{{jobDetails.range}}</p>
     <div>
-        <ul >
-            <li *ngFor="let bullet of jobDetails.bullets">{{bullet}}</li>
+        <ul>
+            <li class="bullets" *ngFor="let bullet of jobDetails.bullets">{{bullet}}</li>
         </ul>
     </div>
 </div>

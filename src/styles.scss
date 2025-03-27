@@ -48,6 +48,8 @@ body {
     font-family: $font-mono;
     display: flex;
     padding: 10px 20px;
+    width: 8rem;
+    text-align: left;
 }
 
 .nav-link:hover {
@@ -63,4 +65,7 @@ body {
     background-color: $lightest-navy;
     color: $green;
   }
+}
+.tab-content {
+  width: 100%;
 }

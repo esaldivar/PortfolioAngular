@@ -1,20 +1,20 @@
-<div class="d-flex">
+<div  id="nav-section" class="d-flex">
 	<div ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-pills flex-column" orientation="vertical">
 		<ng-container [ngbNavItem]="1">
-			<button ngbNavLink>Rush Enterprises</button>
-			<ng-template ngbNavContent>
+			<button class="navButtons"  ngbNavLink>Rush Enterprises</button>
+			<ng-template class="navContent" ngbNavContent>
 				<app-job [jobDetails]="workExperience[0]"/>
 			</ng-template>
 		</ng-container>
 		<ng-container [ngbNavItem]="2">
 			<button ngbNavLink>Mindbody</button>
-			<ng-template ngbNavContent>
+			<ng-template class="navContent"  ngbNavContent>
 				<app-job [jobDetails]="workExperience[1]"/>
 			</ng-template>
 		</ng-container>
 		<ng-container [ngbNavItem]="3">
 			<button ngbNavLink>US Air Force</button>
-			<ng-template ngbNavContent>
+			<ng-template  class="navContent" ngbNavContent>
 				<app-job [jobDetails]="workExperience[2]"/>
 			</ng-template>
 		</ng-container>

@@ -2,6 +2,7 @@
 @import '../../../styles/globals.scss';
 
 div.job-panel {
+    width: 80%;
     h3 {
         span#title {
         color: $lightest-slate;
@@ -31,5 +32,28 @@ div.job-panel {
             }
         }
         
+    }
+    .range {
+        margin-bottom: 25px;
+        color: $light-slate;
+        font-family: $font-mono;
+        font-size: $fz-sm;
+    }
+    ul {
+        list-style: none;
+        li.bullets {
+            padding-left: 30px;
+            position: relative;
+            color: $light-slate;
+            font-size: $fz-md;
+            font-family: $font-sans;
+            margin-bottom: 1rem;
+            &::before {
+                content: "▹";
+                position: absolute;
+                left: 0px;
+                color: $green;
+            }
+        }
     }
 }
