@@ -1,0 +1,35 @@
+@import '../../../styles/colors.scss';
+@import '../../../styles/globals.scss';
+
+div.job-panel {
+    h3 {
+        span#title {
+        color: $lightest-slate;
+        font-weight: 500;
+        }
+        span.company, a.company {
+            color: $green;
+        }
+        a.company {
+            display: inline-block;
+            position: relative;
+            &::after {
+                content: "";
+                display: block;
+                height: 1px;
+                position: absolute;
+                bottom: -0.3rem;
+                left: 0; /* Ensure the animation starts from the left */
+                width: 0%; /* Initial width */
+                background-color: $green;
+                opacity: 0.5;
+                transition: width 300ms ease-in-out; /* Transition only the width */
+            }
+        
+            &:hover::after {
+                width: 100%; /* Set the width to 100% on hover */
+            }
+        }
+        
+    }
+}
