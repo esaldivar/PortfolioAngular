@@ -7,7 +7,9 @@ export interface SocialLink {
 }
 
 export interface JobDetails {
+  id: number,
   title: string,
+  shortCompanyName: string,
   company: string,
   companyUrl: string,
   range: string,
@@ -32,28 +34,71 @@ export class Configuration {
 
       static readonly workExperience: JobDetails[] = [
         {
+          id: 0,
           title: 'Fullstack Software Engineer',
           company: 'Rush Enterprises',
+          shortCompanyName: 'Rush Enterprises',
           companyUrl: 'https://www.rushenterprises.com/',
           range: 'December 2022 - Present',
           bullets: [
             'Spearheaded the development of a robust e-commerce website utilizing .NET MVC; improved user interface and functionality, resulting in an increase in customer engagement and a boost in online sales within the first six months post-launch',
-            'Optimized product reliability by spearheading on-call operations; monitored and resolved downtime and interruptions, reducing system downtime and enhancing overall user experience, as evidenced by an increase in positive customer feedback within a year'
+            'Optimized product reliability by spearheading on-call operations; monitored and resolved downtime and interruptions, reducing system downtime and enhancing overall user experience, as evidenced by an increase in positive customer feedback within a year',
+            'Pioneered the design and implementation of a reusable code framework for services, UI, and test cases, reducing development time and increasing code reusability, thereby accelerating product delivery and improving overall software quality',
+            'Collaborated with key stakeholders to gather and analyze user requirements, leading cross-functional teams to design and implement new features that improved user satisfaction and increased platform functionality, streamlining operational efficiency'
           ]
         },
         {
-          title: 'Fullstack Software Engineer',
+          id: 1,
+          title: 'Frontend Software Engineer',
           company: 'Mindbody',
+          shortCompanyName: 'Mindbody',
           companyUrl: 'https://www.mindbodyonline.com/',
           range: 'October 2021 - November 2022',
-          bullets: []
+          bullets: [
+            'Led the development and deployment of a SaaS platform for fitness and wellness tracking, increasing user engagement and customer retention through personalized health insights and seamless integration with wearable devices',
+            'Championed the adoption of engineering best practices, significantly enhancing testing protocols, Azure DevOps CI/CD integration, and system architecture; implemented automation techniques that increased deployment efficiency and reduced error rates',
+            'Facilitated mentorship and supervised onboarding for interns and transitioning engineers in front-end technologies, resulting in an increase in productivity and a seamless integration process, as evidenced by a reduction in onboarding time and positive feedback from team members',
+            'Developed an internal component library for front-end developers, streamlining UI development processes and ensuring consistency across projects. This initiative reduced development time and led to an increase in code reusability, resulting in more efficient and scalable web applications'
+          ]
         },
         {
+          id: 2,
+          title: 'Open Source Developer',
+          company: 'RediQLess',
+          shortCompanyName: 'RediQLess',
+          companyUrl: 'https://www.linkedin.com/company/80086312/admin/dashboard/',
+          range: 'June 2021 - October 2021',
+          bullets: [
+            'Led the development and deployment of a SaaS platform for fitness and wellness tracking, increasing user engagement and customer retention through personalized health insights and seamless integration with wearable devices',
+            'Championed the adoption of engineering best practices, significantly enhancing testing protocols, Azure DevOps CI/CD integration, and system architecture; implemented automation techniques that increased deployment efficiency and reduced error rates',
+            'Facilitated mentorship and supervised onboarding for interns and transitioning engineers in front-end technologies, resulting in an increase in productivity and a seamless integration process, as evidenced by a reduction in onboarding time and positive feedback from team members',
+            'Developed an internal component library for front-end developers, streamlining UI development processes and ensuring consistency across projects. This initiative reduced development time and led to an increase in code reusability, resulting in more efficient and scalable web applications'
+          ]
+        },
+        {
+          id: 3,
+          title: 'Virtual Learning Teacher',
+          company: 'Katy ISD',
+          shortCompanyName: 'Katy ISD',
+          companyUrl: 'https://www.katyisd.org/',
+          range: 'August 2014 - October 2021',
+          bullets: [
+            'Developed an online curriculum from scratch using Canvas a blackboard as well as the integration of other technologies to emulate a classroom environment comparable to an in-person learning experience',
+            'Trained and assisted other educators at the campus level with technologies and maintenance of the curriculum'
+          ]
+        },
+        {
+          id: 4,
           title: 'Computer Administrator',
           company: 'United States Air Force',
+          shortCompanyName: 'US Air Force',
           companyUrl: 'https://www.airforce.com/',
           range: 'August 2003 - September 2007',
-          bullets: []
+          bullets: [
+            'Worked a 24-hour help desk to ensure users were able to utilize the network and their own front end experience',
+            'Pushed patches out to make sure the base maintained a uniform experiencewithout bugs or issues that slowed down their productivity',
+            'Used a help-desk ticket system that flagged priority issues to be addressed and communicated the completion of tickets to supervising airmen'
+          ]
         }
       ]
       

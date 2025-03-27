@@ -1,23 +1,13 @@
 <div  id="nav-section" class="d-flex">
 	<div ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-pills flex-column" orientation="vertical">
-		<ng-container [ngbNavItem]="1">
-			<button class="navButtons"  ngbNavLink>Rush Enterprises</button>
-			<ng-template class="navContent" ngbNavContent>
-				<app-job [jobDetails]="workExperience[0]"/>
-			</ng-template>
-		</ng-container>
-		<ng-container [ngbNavItem]="2">
-			<button ngbNavLink>Mindbody</button>
-			<ng-template class="navContent"  ngbNavContent>
-				<app-job [jobDetails]="workExperience[1]"/>
-			</ng-template>
-		</ng-container>
-		<ng-container [ngbNavItem]="3">
-			<button ngbNavLink>US Air Force</button>
-			<ng-template  class="navContent" ngbNavContent>
-				<app-job [jobDetails]="workExperience[2]"/>
-			</ng-template>
-		</ng-container>
+		@for(work of workExperience; track work.id; let idx = $index){
+			<ng-container [ngbNavItem]="idx + 1">
+				<button class="selected" class="navButtons"  ngbNavLink>{{work.shortCompanyName}}</button>
+				<ng-template class="navContent" ngbNavContent>
+					<app-job [jobDetails]="work"/>
+				</ng-template>
+			</ng-container>
+		}
 	</div>
 
 	<div [ngbNavOutlet]="nav" class="ms-4"></div>

@@ -1,3 +1,5 @@
-.navButtons {
-    background-color: red;
+@import '../../../styles/colors.scss';
+@import '../../../styles/globals.scss';
+button.selected {
+    border-left: 3px solid $green !important;
 }

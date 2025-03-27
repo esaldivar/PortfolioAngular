@@ -48,8 +48,13 @@ body {
     font-family: $font-mono;
     display: flex;
     padding: 10px 20px;
-    width: 8rem;
     text-align: left;
+    border-left: 2px solid $lightest-navy;
+    white-space: nowrap;
+    &.active {
+      border-left: 3px solid $green;
+      transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
+    }
 }
 
 .nav-link:hover {
