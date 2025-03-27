@@ -37,7 +37,30 @@ body {
     height: 100vh;
   }
 
+  //overrides
   .offcanvas.offcanvas-end {
     width: 80% !important;
-    
   }
+
+  .nav-pills .nav-link {
+    border-radius: 0;
+    color: $slate;
+    font-family: $font-mono;
+    display: flex;
+    padding: 10px 20px;
+}
+
+.nav-link:hover {
+  color: $green;
+  background-color: $lightest-navy;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link{
+  background-color: transparent;
+  color: $green;
+  border-radius: 0;
+  &:hover {
+    background-color: $lightest-navy;
+    color: $green;
+  }
+}
