@@ -7,7 +7,6 @@ import { isDevMode } from '@angular/core';
 const isMobile = () => {
   return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 }
-console.log("is mobile? :" + isMobile());
 
 if(!isDevMode() && !isMobile()) {
   emailjs.init(import.meta.env.NG_APP_EMAILJS);

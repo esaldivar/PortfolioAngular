@@ -6,6 +6,7 @@ declare interface Env {
   NG_APP_EMAILJS: string;
   NG_APP_SERVICE_ID: string;
   NG_APP_SERVICE_TEMPLATE: string;
+  NG_APP_CLOUDFRONT_CDN: string;
   [key: string]: any;
 }
 

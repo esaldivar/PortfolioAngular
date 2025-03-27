@@ -19,7 +19,7 @@ export class HeaderComponent implements AfterViewInit {
   @Output() blurBackground = new EventEmitter<boolean>(false);
   email = 'esaldivar1214@gmail.com';
   config = new Configuration();
-       
+  
   ngAfterViewInit () {
     const options = {
       ...this.config.srConfig(),

@@ -8,9 +8,9 @@ import { Configuration } from '../../utils/config';
   styleUrl: './avatar.component.scss'
 })
 export class AvatarComponent {
-@ViewChild('logo') logo!: ElementRef;
+  @ViewChild('logo') logo!: ElementRef;
   config = new Configuration();
-  
+  cdnUrl = import.meta.env.NG_APP_CLOUDFRONT_CDN + "/logo.webp";
   
   ngAfterViewInit () {
     const options = {

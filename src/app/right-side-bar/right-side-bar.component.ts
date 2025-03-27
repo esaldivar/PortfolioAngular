@@ -10,6 +10,7 @@ import { Configuration } from '../../utils/config';
 export class RightSideBarComponent {
   @ViewChild('resume') resume!: ElementRef;
   @ViewChild('emailAddress') emailAddress!: ElementRef;
+  cdnUrl = import.meta.env.NG_APP_CLOUDFRONT_CDN + "/Eric+Saldivar+Resume+25.pdf";
   email = 'esaldivar1214@gmail.com';
   config = new Configuration();
        
