@@ -57,3 +57,34 @@ div.job-panel {
         }
     }
 }
+
+@media (max-width: 768px) {
+    div.job-panel {
+        width: 100%;
+        a.company {
+            &::after {
+                display: none;
+            }
+            &:hover::after {
+                width: 0%; /* Set the width to 100% on hover */
+            }
+        }
+        ul {
+            padding-left: 0;
+            li.bullets {
+                padding-left: 20px;
+                position: relative;
+                color: $light-slate;
+                font-size: $fz-md;
+                font-family: $font-sans;
+                margin-bottom: 1rem;
+                &::before {
+                    content: "▹";
+                    position: absolute;
+                    left: 0px;
+                    color: $green;
+                }
+            }
+        }
+    }
+ }

@@ -1,1 +1,13 @@
-<p>mobile-nav works!</p>
+<div id="work-tabs">
+    <ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-tabs">
+        @for(work of workExperience; track work.id; let idx = $index){
+            <li [ngbNavItem]="idx">
+                <button class="tab-buttons" ngbNavLink>{{work.shortCompanyName}}</button>
+                <ng-template class="navContent" ngbNavContent>
+					<app-job [jobDetails]="work"/>
+				</ng-template>
+            </li>
+		}
+    </ul>
+    <div [ngbNavOutlet]="nav" class="mt-2"></div>
+</div>

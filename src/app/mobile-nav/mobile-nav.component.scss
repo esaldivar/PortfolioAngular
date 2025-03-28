@@ -1,0 +1,11 @@
+div#work-tabs {
+    display: flex;
+    flex-direction: column;
+    ul {
+        flex-wrap: nowrap;
+        li {
+            display: flex;
+        }
+    }
+
+}

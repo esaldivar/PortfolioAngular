@@ -37,7 +37,7 @@ export class Configuration {
           id: 0,
           title: 'Fullstack Software Engineer',
           company: 'Rush Enterprises',
-          shortCompanyName: 'Rush Enterprises',
+          shortCompanyName: 'Rush',
           companyUrl: 'https://www.rushenterprises.com/',
           range: 'December 2022 - Present',
           bullets: [
@@ -73,31 +73,6 @@ export class Configuration {
             'Championed the adoption of engineering best practices, significantly enhancing testing protocols, Azure DevOps CI/CD integration, and system architecture; implemented automation techniques that increased deployment efficiency and reduced error rates',
             'Facilitated mentorship and supervised onboarding for interns and transitioning engineers in front-end technologies, resulting in an increase in productivity and a seamless integration process, as evidenced by a reduction in onboarding time and positive feedback from team members',
             'Developed an internal component library for front-end developers, streamlining UI development processes and ensuring consistency across projects. This initiative reduced development time and led to an increase in code reusability, resulting in more efficient and scalable web applications'
-          ]
-        },
-        {
-          id: 3,
-          title: 'Virtual Learning Teacher',
-          company: 'Katy ISD',
-          shortCompanyName: 'Katy ISD',
-          companyUrl: 'https://www.katyisd.org/',
-          range: 'August 2014 - October 2021',
-          bullets: [
-            'Developed an online curriculum from scratch using Canvas a blackboard as well as the integration of other technologies to emulate a classroom environment comparable to an in-person learning experience',
-            'Trained and assisted other educators at the campus level with technologies and maintenance of the curriculum'
-          ]
-        },
-        {
-          id: 4,
-          title: 'Computer Administrator',
-          company: 'United States Air Force',
-          shortCompanyName: 'US Air Force',
-          companyUrl: 'https://www.airforce.com/',
-          range: 'August 2003 - September 2007',
-          bullets: [
-            'Worked a 24-hour help desk to ensure users were able to utilize the network and their own front end experience',
-            'Pushed patches out to make sure the base maintained a uniform experiencewithout bugs or issues that slowed down their productivity',
-            'Used a help-desk ticket system that flagged priority issues to be addressed and communicated the completion of tickets to supervising airmen'
           ]
         }
       ]

@@ -6,10 +6,10 @@ import { CommonModule } from '@angular/common';
 
 @Component({
 	selector: 'work-nav',
-	imports: [NgbNavModule, NgbNavModule, JobComponent, CommonModule],
+	imports: [NgbNavModule, JobComponent, CommonModule],
 	templateUrl: './nav.component.html',
 })
 export class NgbdNavVertical {
 	active = 1;
-  workExperience: JobDetails[] = Configuration.workExperience;
+	workExperience: JobDetails[] = Configuration.workExperience;
 }
