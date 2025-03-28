@@ -60,6 +60,7 @@ div.job-panel {
 
 @media (max-width: 768px) {
     div.job-panel {
+        margin-top: 1rem;
         width: 100%;
         a.company {
             &::after {
