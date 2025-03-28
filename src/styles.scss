@@ -56,16 +56,22 @@ body {
       transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
     }
 }
-
 .nav-tabs {
-  color: $slate;
+  border: none;
+}
+.nav-tabs .nav-link {
+    color: $slate;
     font-family: $font-mono;
     display: flex;
     text-align: left;
+    background-color: transparent;
     border-bottom: 2px solid $lightest-navy;
     white-space: nowrap;
     &.active {
       border-bottom: 3px solid $green;
+      background-color: $lightest-navy;
+      border: none;
+      color: $green;
       transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
     }
 }
