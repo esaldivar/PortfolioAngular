@@ -168,6 +168,7 @@ section#about {
 
 @media (max-width: 768px) {
     section#about {
+        margin-top: 2rem;
         h2.numbered-heading {
             padding-left: 1rem;
             &::after {

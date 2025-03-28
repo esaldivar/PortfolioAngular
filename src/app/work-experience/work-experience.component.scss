@@ -32,4 +32,32 @@ font-family: $font-sans;
             background-color: $lightest-navy;
         }
     }
+
+    #mobile-nav {
+        display: none;
+    }
+
 }
+@media (max-width: 768px) {
+    section#work-experience{
+        margin-top: 2rem;
+        padding: 0 1rem;
+        h2.numbered-heading {
+            &::after {
+                content: "";
+                display: flex;
+                margin-top: 5px;
+                width: 4rem;
+                height: 0.063rem;
+                margin-left: 20px;
+                background-color: $lightest-navy;
+            }
+        }
+        #nav {
+            display: none;
+        }
+        #mobile-nav {
+            display: flex;
+        }
+    }
+ }

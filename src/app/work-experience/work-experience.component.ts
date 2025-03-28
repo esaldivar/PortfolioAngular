@@ -1,10 +1,11 @@
 import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { Configuration } from '../../utils/config';
 import { NgbdNavVertical } from '../nav/nav.component';
+import { MobileNavComponent } from '../mobile-nav/mobile-nav.component';
 
 @Component({
   selector: 'app-work-experience',
-  imports: [NgbdNavVertical],
+  imports: [NgbdNavVertical, MobileNavComponent],
   templateUrl: './work-experience.component.html',
   styleUrl: './work-experience.component.scss'
 })
