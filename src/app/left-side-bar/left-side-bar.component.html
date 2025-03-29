@@ -3,7 +3,7 @@
     <div id="social-links" #links>
         <ul>
             <li *ngFor="let link of socialLinks">
-                <a [href]="link.url" [ngbTooltip]="link.name" tooltipClass="my-custom-class" placement="end" target="_blank" rel="noopener noreferrer" [attr.aria-label]="link.name">
+                <a [href]="link.url" [ngbTooltip]="link.name" tooltipClass="social-tooltips" placement="end" target="_blank" rel="noopener noreferrer" [attr.aria-label]="link.name">
                     <svg xmlns="http://www.w3.org/2000/svg" class="icon" aria-hidden="true" focusable="false" viewBox="0 0 512 512">
                         <path
                           fill="currentColor"
