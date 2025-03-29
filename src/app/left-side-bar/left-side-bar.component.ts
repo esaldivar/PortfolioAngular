@@ -2,11 +2,12 @@ import { CommonModule } from '@angular/common';
 import { Component, ElementRef, ViewChild } from '@angular/core';
 import { Configuration, SocialLink } from '../../utils/config';
 import { AvatarComponent } from "../avatar/avatar.component";
+import { NgbTooltipModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 @Component({
   selector: 'app-left-side-bar',
-  imports: [CommonModule, AvatarComponent],
+  imports: [CommonModule, AvatarComponent, NgbTooltipModule],
   templateUrl: './left-side-bar.component.html',
   styleUrl: './left-side-bar.component.scss'
 })

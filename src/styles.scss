@@ -93,3 +93,16 @@ body {
 .tab-content {
   width: 100%;
 }
+
+
+.my-custom-class  .tooltip-inner{
+  background-color: $lightest-navy;
+  color: $green;
+  font-size: 125%;
+  border: 1px solid $green;
+}
+
+.my-custom-class.bs-tooltip-end .tooltip-arrow::before {
+  border-right-color: $green;
+  border-width: 4px;
+}

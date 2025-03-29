@@ -1,5 +1,5 @@
-
-
+@import '../../styles/colors.scss';
+@import '../../styles/globals.scss';
 
   div#left-side-bar {
     position: fixed;
@@ -22,19 +22,23 @@
             list-style: none;
             li {
                 margin-top: 2rem;
+                transition: $transition;
                 a {
                     text-decoration: none;
                     color:#ccd6f6;
+                    
                     .icon {
                         width: 1.5rem;
                         height: 1.5rem;
                         vertical-align: -0.125em;
                       }
                     &:hover {
-                        color: #64ffda;
+                        color: $green;
                     }  
-    
                 }
+                &:hover {
+                  transform: translateY(-3px);
+              } 
             }
 
         }
