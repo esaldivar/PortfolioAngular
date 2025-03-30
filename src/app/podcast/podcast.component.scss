@@ -122,6 +122,12 @@ font-family: $font-sans;
             color: $lightest-slate;
             line-height: 1.1;
         }
+        div#podcast-intro {
+            display: flex;
+            div#right-section {
+                display: none;
+            }
+        }
         div#podcast-container {
             display: flex;
             flex-direction: column;
