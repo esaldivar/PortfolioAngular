@@ -60,11 +60,13 @@ font-family: $font-sans;
                 }
             }
         }    
+        div#right-section {
+            color: $slate;
+        }
     }
     div#podcast-container {
         display: flex;
         gap: 1rem;
-        background-color: $lightest-navy !important;
         padding: 1rem;
         border-radius: 5px;
         margin-top: 1rem;
@@ -73,15 +75,12 @@ font-family: $font-sans;
             flex-direction: column;
             justify-content: flex-start;
             gap: 1rem;
-            background-color: $lightest-navy;
 
             div#episode-title{
-                background-color: $lightest-navy !important;
                 p {
                     text-align: center;
                     color: $green;
                     font-family: $font-mono;
-                    background-color: $lightest-navy;
                 }
             }
 
@@ -89,7 +88,6 @@ font-family: $font-sans;
                 display: flex;
                 flex-direction: column;
                 gap: 1rem;
-                background-color: $lightest-navy;
                 button {
                     display: flex;
                     justify-content: center;

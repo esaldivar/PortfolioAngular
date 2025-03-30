@@ -3,8 +3,8 @@
         <ul *ngFor="let link of socialLinks">
             <li>
                 <a [href]="link.url" target="_blank" rel="noopener noreferrer" [attr.aria-label]="link.name">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" aria-hidden="true" focusable="false" viewBox="0 0 512 512">
-                        <path
+                   <svg xmlns="http://www.w3.org/2000/svg" class="icon" aria-hidden="true" focusable="false" viewBox="0 0 512 512">
+                         <path
                           fill="currentColor"
                           [attr.d]="link.path"
                         />
