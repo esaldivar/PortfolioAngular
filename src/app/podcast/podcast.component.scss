@@ -31,23 +31,65 @@ font-family: $font-sans;
             background-color: $lightest-navy;
         }
     }
+    div#podcast-intro {
+        display: grid;
+        grid-template-columns: 3fr 2fr;
+        gap: 3rem;
+        ul {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(140px, 200px));
+            gap: 0px 10px;
+            padding: 0px;
+            margin: 20px 0px 0px;
+            overflow: hidden;
+            list-style: none;
+            list-style-type: none;
+            li {
+                position: relative;
+                margin-bottom: 10px;
+                padding-left: 20px;
+                font-family: $font-mono;
+                font-size: $fz-md;
+                &::before {
+                    content: "▹";
+                    position: absolute;
+                    left: 0px;
+                    color: $green;
+                    font-size: $fz-sm;
+                    line-height: 12px;
+                }
+            }
+        }    
+    }
     div#podcast-container {
         display: flex;
         gap: 1rem;
+        background-color: $lightest-navy !important;
+        padding: 1rem;
+        border-radius: 5px;
+        margin-top: 1rem;
         div.episodes {
             display: flex;
             flex-direction: column;
             justify-content: flex-start;
             gap: 1rem;
-            p {
-                text-align: center;
-                color: $green;
-                font-family: $font-mono;
+            background-color: $lightest-navy;
+
+            div#episode-title{
+                background-color: $lightest-navy !important;
+                p {
+                    text-align: center;
+                    color: $green;
+                    font-family: $font-mono;
+                    background-color: $lightest-navy;
+                }
             }
+
             div#episode-button-section {
                 display: flex;
                 flex-direction: column;
                 gap: 1rem;
+                background-color: $lightest-navy;
                 button {
                     display: flex;
                     justify-content: center;
