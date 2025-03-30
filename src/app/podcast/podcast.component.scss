@@ -1,0 +1,46 @@
+@import '../../styles/colors.scss';
+@import '../../styles/globals.scss';
+
+section#podcast{
+display: flex;
+flex-direction: column;
+width: 100%;
+font-family: $font-sans;
+    h2.numbered-heading {
+        display: flex;
+        -webkit-box-align: center;
+        align-items: center;
+        position: relative;
+        margin: 10px 0px 40px;
+        width: 100%;
+        font-size: clamp(26px, 5vw, $fz-heading);
+        white-space: nowrap;
+        span {
+            font-family: $font-mono;
+            color: $green;
+            margin-right: 1rem;
+            font-weight: 400;
+        }
+        &::after {
+            content: "";
+            display: flex;
+            margin-top: 5px;
+            width: 15rem;
+            height: 0.063rem;
+            margin-left: 20px;
+            background-color: $lightest-navy;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    section#podcast {
+        padding: 0 1rem;
+        h2 {
+            font-weight: 600;
+            font-size: 2.5rem;
+            color: $lightest-slate;
+            line-height: 1.1;
+        }
+    }
+}
