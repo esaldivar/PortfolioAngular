@@ -31,6 +31,46 @@ font-family: $font-sans;
             background-color: $lightest-navy;
         }
     }
+    div#podcast-container {
+        display: flex;
+        gap: 1rem;
+        div.episodes {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            gap: 1rem;
+            p {
+                text-align: center;
+                color: $green;
+                font-family: $font-mono;
+            }
+            div#episode-button-section {
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+                button {
+                    display: flex;
+                    justify-content: center;
+                    flex-wrap: wrap;
+                    color: #64ffda;
+                    background-color: transparent;
+                    border: 1px solid #64ffda;
+                    border-radius: 4px;
+                    padding: 0.75rem 1rem;
+                    font-family: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
+                    line-height: 1;
+                    text-decoration: none;
+                    transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
+                    font-size: 13px;
+                    &:hover {
+                        outline: none;
+                        box-shadow: 3px 3px 0 0 #64ffda;
+                        transform: translate(-4px, -4px);
+                    }
+                }
+            }
+        }
+    }
 }
 
 @media (max-width: 768px) {
@@ -41,6 +81,32 @@ font-family: $font-sans;
             font-size: 2.5rem;
             color: $lightest-slate;
             line-height: 1.1;
+        }
+        div#podcast-container {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            div.episodes {
+
+                div#episode-button-section {
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    button {
+                        flex-wrap: wrap;
+                        padding: 5px;
+                        color: #64ffda;
+                        background-color: transparent;
+                        font-size: 13px;
+                        &:hover {
+                            outline: none;
+                            box-shadow: 3px 3px 0 0 #64ffda;
+                            transform: translate(-4px, -4px);
+                        }
+                    }
+                }
+                
+            }
         }
     }
 }

@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Configuration } from '../../utils/config';
 
 @Component({
   selector: 'app-projects',
@@ -6,6 +7,12 @@ import { Component } from '@angular/core';
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.scss'
 })
-export class ProjectsComponent {
+export class ProjectsComponent implements AfterViewInit {
+  @ViewChild('projects') projects!: ElementRef;
+  config = new Configuration();
 
+  ngAfterViewInit () {
+    this.config.sr(this.projects);
+  }
+  
 }
