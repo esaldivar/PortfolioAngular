@@ -35,12 +35,12 @@ footer {
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 1rem;
+            gap: 2rem;
             margin-top: 1rem;
             ul {
     
                 list-style-type: none;
-    
+                padding-left: 0;
                 li a {
     
                     padding: 10px;
