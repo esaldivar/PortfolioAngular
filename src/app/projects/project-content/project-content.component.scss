@@ -1,0 +1,65 @@
+@import '../../../styles/colors.scss';
+@import '../../../styles/globals.scss';
+
+div.project-container {
+    position: relative;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(12, 1fr);
+    -webkit-box-align: center;
+    align-items: center;
+    div.project-content {
+        position: relative;
+        grid-area: 1 / 1 / -1 / 7;
+        grid-column: 5 / -1;
+        > div {
+            text-align: right;
+            p.project-overline {
+                margin: 10px 0px;
+                color: $green;
+                font-family: $font-mono;
+                font-size: $fz-xs;
+                font-weight: 400;
+            }
+            h3.project-title {
+                color: $light-slate;
+                font-size: clamp(24px, 5vw, 28px);
+                font-weight: 600;
+                margin: 0px 0px 20px;
+            }
+            div.project-description {
+                box-shadow: 0 10px 30px -15px var(--navy-shadow);
+                transition: $transition;
+                position: relative;
+                z-index: 2;
+                padding: 25px;
+                border-radius: $border-radius;
+                background-color: $light-navy;
+                color: $light-slate;
+                font-size: $fz-lg;
+            }
+
+            ul.project-tech-list {
+                display: flex;
+                flex-wrap: wrap;
+                position: relative;
+                z-index: 2;
+                margin: 25px 0px 10px;
+                padding: 0px;
+                list-style: none;
+                justify-content: flex-end;
+                li {
+                    margin: 0px 0px 5px 20px;
+                    color: $light-slate;
+                    font-family: $font-mono;
+                    font-size: $fz-md;
+                    white-space: nowrap;
+                }
+            }
+        }
+
+    }
+    div.project-image{
+
+    }
+}

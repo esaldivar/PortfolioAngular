@@ -1,9 +1,10 @@
 import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { Configuration } from '../../utils/config';
+import { ProjectContentComponent } from './project-content/project-content.component';
 
 @Component({
   selector: 'app-projects',
-  imports: [],
+  imports: [ProjectContentComponent],
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.scss'
 })

@@ -2,10 +2,10 @@
 @import '../../styles/globals.scss';
 
 section#projects{
-display: flex;
-flex-direction: column;
-width: 100%;
-font-family: $font-sans;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    font-family: $font-sans;
     h2.numbered-heading {
         display: flex;
         -webkit-box-align: center;
@@ -31,6 +31,12 @@ font-family: $font-sans;
             background-color: $lightest-navy;
         }
     }
+    ul {
+        list-style: none;
+        padding: 0px;
+        margin: 0px;
+    }
+
 }
 
 @media (max-width: 768px) {
