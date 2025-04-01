@@ -107,6 +107,17 @@ div.project-container {
                 background-color: $navy;
                 mix-blend-mode: screen;
             }
+            &:hover {
+                background: transparent;
+                outline: 0px;
+                .img {
+                    filter: none;
+                    background: transparent;
+                }
+                &::before {
+                    background-color: transparent;
+                }
+            }
             div.img {
                 border-radius: $border-radius;
                 mix-blend-mode: multiply;
@@ -117,6 +128,10 @@ div.project-container {
                 display: inline-block;
                 position: relative;
                 overflow: hidden;
+                &:hover {
+                    filter: none;
+                    background: transparent;
+                }
                 > div {
                     max-width: 700px;
                     display: block;
