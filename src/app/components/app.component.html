@@ -1,0 +1,19 @@
+<app-left-side-bar id="leftColumn"/>
+<div id="middleColumn" [class.blur]="blur">
+  <app-header id="app-header" (blurBackground)="handlemobileAsideBlur($event)"/>
+  <app-avatar id="avatar"/>
+  <main>
+    <div class="content">
+      <app-introduction id="introduction"/>
+      <app-about-me id="about"/>
+      <app-work-experience id="experience"/>
+      <app-projects id="work"/>
+      <app-podcast id="podcast"/>
+      <app-contact id="contact" />
+      <app-footer id="footer"/>
+    </div>
+  </main>
+</div>
+<app-right-side-bar id="rightColumn"/>
+<app-toasts />
+

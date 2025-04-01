@@ -1,0 +1,91 @@
+@import '../../../../styles/colors.scss';
+@import '../../../../styles/globals.scss';
+
+div.job-panel {
+    width: 80%;
+    h3 {
+        span#title {
+        color: $lightest-slate;
+        font-weight: 500;
+        }
+        span.company, a.company {
+            color: $green;
+        }
+        a.company {
+            display: inline-block;
+            position: relative;
+            &::after {
+                content: "";
+                display: block;
+                height: 1px;
+                position: absolute;
+                bottom: -0.3rem;
+                left: 0; /* Ensure the animation starts from the left */
+                width: 0%; /* Initial width */
+                background-color: $green;
+                opacity: 0.5;
+                transition: width 300ms ease-in-out; /* Transition only the width */
+            }
+        
+            &:hover::after {
+                width: 100%; /* Set the width to 100% on hover */
+            }
+        }
+        
+    }
+    .range {
+        margin-bottom: 25px;
+        color: $light-slate;
+        font-family: $font-mono;
+        font-size: $fz-md;
+    }
+    ul {
+        list-style: none;
+        li.bullets {
+            padding-left: 30px;
+            position: relative;
+            color: $slate;
+            font-size: $fz-lg;
+            font-family: $font-sans;
+            margin-bottom: 1rem;
+            &::before {
+                content: "▹";
+                position: absolute;
+                left: 0px;
+                color: $green;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    div.job-panel {
+        margin-top: 1rem;
+        width: 100%;
+        a.company {
+            &::after {
+                display: none;
+            }
+            &:hover::after {
+                width: 0%; /* Set the width to 100% on hover */
+            }
+        }
+        ul {
+            padding-left: 0;
+            li.bullets {
+                padding-left: 20px;
+                position: relative;
+                color: $light-slate;
+                font-size: $fz-md;
+                font-family: $font-sans;
+                margin-bottom: 1rem;
+                &::before {
+                    content: "▹";
+                    position: absolute;
+                    left: 0px;
+                    color: $green;
+                }
+            }
+        }
+    }
+ }

@@ -1,0 +1,58 @@
+@import '../../../styles/colors.scss';
+@import '../../../styles/globals.scss';
+
+  div#left-side-bar {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    position: fixed;
+    width: 10%;
+
+      #social-links {
+
+        font-family: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
+        line-height: 18px;
+        letter-spacing: 0.1em;
+        ul {
+            padding-left: 0;
+            column-gap: 2rem;
+            list-style: none;
+            li {
+                margin-top: 2rem;
+                transition: $transition;
+                a {
+                    text-decoration: none;
+                    color:#ccd6f6;
+                    
+                    .icon {
+                        width: 1.5rem;
+                        height: 1.5rem;
+                        vertical-align: -0.125em;
+                      }
+                    &:hover {
+                        color: $green;
+                    }  
+                }
+                &:hover {
+                  transform: translateY(-3px);
+              } 
+            }
+
+        }
+        
+        &::after {
+            content: "";
+            display: block;
+            width: 1px;
+            height: 7rem;
+            margin: 0px auto;
+            background-color: #a8b2d1;
+            margin-top: 2rem;
+            
+        }
+      }
+
+  }
