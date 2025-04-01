@@ -1,5 +1,8 @@
 import { ElementRef } from '@angular/core';
 import ScrollReveal from 'scrollreveal'
+
+const cdnUrl = import.meta.env.NG_APP_CLOUDFRONT_CDN;
+
 export interface SocialLink {
   name: string,
   url: string,
@@ -14,6 +17,15 @@ export interface JobDetails {
   companyUrl: string,
   range: string,
   bullets: string[]
+}
+
+export interface Project {
+  title: string,
+  description: string,
+  techStack: string[],
+  github: string,
+  imageUrl: string,
+  website?: string
 }
 export class Configuration {
     static readonly socials:  SocialLink[] = [
@@ -82,6 +94,31 @@ export class Configuration {
         }
       ]
       
+      static readonly projects: Project[] = [
+        {
+          title: 'Spotify Profile',
+          description: 'A web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information about each track. Create and save new playlists of recommended tracks based on your existing playlists and more.',
+          techStack: ['React', 'Styled Components', 'Express', 'Spotify API'],
+          github: 'https://github.com/bchiang7/spotify-profile',
+          imageUrl: `${cdnUrl}/aboutme.webp`,
+          website: 'https://spotify-profile.herokuapp.com/'
+        },
+        {
+          title: 'Spotify Profile',
+          description: 'A web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information about each track. Create and save new playlists of recommended tracks based on your existing playlists and more.',
+          techStack: ['React', 'Styled Components', 'Express', 'Spotify API'],
+          github: 'https://github.com/bchiang7/spotify-profile',
+          imageUrl: `${cdnUrl}/aboutme.webp`,
+          website: 'https://spotify-profile.herokuapp.com/'
+        },
+        {
+          title: 'Spotify Profile',
+          description: 'A web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information about each track. Create and save new playlists of recommended tracks based on your existing playlists and more.',
+          techStack: ['React', 'Styled Components', 'Express', 'Spotify API'],
+          github: 'https://github.com/bchiang7/spotify-profile',
+          imageUrl: `${cdnUrl}/aboutme.webp`
+        }
+      ]
       srConfig = (delay = 200, viewFactor = 0.25) => ({
         origin: 'bottom',
         distance: '20px',
