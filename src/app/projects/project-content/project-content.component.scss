@@ -68,7 +68,6 @@ div.project-container {
             }
             li {
                 margin: 0px 0px 5px 20px;
-                margin: 0px 20px 5px 0px;
                 color: $light-slate;
                 font-family: $font-mono;
                 font-size: $fz-xs;
@@ -176,5 +175,24 @@ div.project-container {
             }
         }
         
+    }
+}
+
+@media (max-width: 768px) {
+    div.project-container {
+        display: flex;
+        flex-direction: column;
+        div.project-content{
+            ul.project-tech-list{
+                gap: 1rem;
+                li {
+                    margin: 0px;
+                }
+            }
+
+        }
+        div.project-image {
+            display: none;
+        }
     }
 }
