@@ -72,6 +72,15 @@ div.project-container {
                 font-family: $font-mono;
                 font-size: $fz-xs;
                 white-space: nowrap;
+                &:first-of-type {
+                    margin: 0px 0px 5px 0px;
+                }
+            }
+            &.project-on-left  li {
+                -webkit-box-pack: end;
+                justify-content: flex-end;
+                margin: 0px 0px 0px 20px;
+
             }
         }
         div.project-links {
