@@ -74,6 +74,43 @@ div.project-container {
                 white-space: nowrap;
             }
         }
+        div.project-links {
+            display: flex;
+            flex-direction: row;
+            -webkit-box-align: center;
+            align-items: center;
+            position: relative;
+            margin-top: 10px;
+            margin-left: -10px;
+            color: $lightest-slate;
+            &.project-on-left {
+                -webkit-box-pack: end;
+                justify-content: flex-end;
+                margin-left: 0px;
+                margin-right: -10px;
+            }
+            a {
+                display: flex;
+                -webkit-box-pack: center;
+                justify-content: center;
+                -webkit-box-align: center;
+                align-items: center;
+                padding: 10px;
+                position: relative;
+                z-index: 1;
+                color: $lightest-slate;
+                transition: $transition;
+                &:hover {
+                    color: $green;
+                }
+                svg {
+                    width: 1.25rem;
+                    height: 1.25rem;
+                    fill: currentcolor;
+                    vertical-align: middle;
+                }
+            }
+        }
         
     }
     div.project-image {
