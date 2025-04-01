@@ -14,7 +14,7 @@ div.project-container {
     div.project-content {
         position: relative;
         grid-area: 1 / 1 / -1 / 7;
-        &:nth-of-type(2n+1){
+        &.project-on-left{
             grid-column: 7 / -1;
             text-align: right;
         }
@@ -62,7 +62,7 @@ div.project-container {
             margin: 25px 0px 10px;
             padding: 0px;
             list-style: none;
-            &:nth-of-type(2n + 1) {
+            &.project-on-left {
                 -webkit-box-pack: end;
                 justify-content: flex-end;
             }
@@ -83,9 +83,9 @@ div.project-container {
         grid-area: 1 / 6 / -1 / -1;
         position: relative;
         z-index: 1;
-        grid-column: 1 / 8;
-        &:nth-of-type(2n+1){
-            grid-column: 7 / -1;
+        grid-column: 7 / -1;
+        &.project-on-left {
+            grid-column: 1 / 8;
         }
 
         a {

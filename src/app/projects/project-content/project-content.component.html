@@ -1,5 +1,5 @@
 <div class="project-container">
-    <div class="project-content">
+    <div class="project-content" [ngClass]="{'project-on-left': projectOnLeft}">
         <div>
             <p class="project-overline">Featured Project</p>
             <h3 class="project-title">
@@ -8,7 +8,7 @@
             <div class="project-description">
                 A minimal, dark blue theme for VS Code, Sublime Text, Atom, iTerm, and more. Available on Visual Studio Marketplace, Package Control, Atom Package Manager, and npm.
             </div>
-            <ul class="project-tech-list">
+            <ul class="project-tech-list" [ngClass]="{'project-on-left': projectOnLeft}">
                 <li>React</li>
                 <li>Express</li>
                 <li>Spotify API</li>
@@ -19,7 +19,7 @@
             </div>
         </div>
     </div>
-    <div class="project-image">
+    <div class="project-image" [ngClass]="{'project-on-left': projectOnLeft}">
         <a href="https://halcyon-theme.netlify.com/" rel="noopener noreferrer" target="_blank">
             <div data-gatsby-image-wrapper="" class="gatsby-image-wrapper gatsby-image-wrapper-constrained img">
                 <div style="max-width: 700px; display: block;"><img alt="" role="presentation" aria-hidden="true" src="data:image/svg+xml;charset=utf-8,%3Csvg height='438' width='700' xmlns='http://www.w3.org/2000/svg' version='1.1'%3E%3C/svg%3E" style="max-width: 100%; display: block; position: static;"></div>
