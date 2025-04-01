@@ -8,6 +8,7 @@ div.project-container {
     grid-template-columns: repeat(12, 1fr);
     -webkit-box-align: center;
     align-items: center;
+    margin-top: 2rem;
     &:not(:last-of-type){
         margin-bottom: 100px;
     }
