@@ -35,6 +35,11 @@ section#projects{
         list-style: none;
         padding: 0px;
         margin: 0px;
+        li {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
     }
 
 }
