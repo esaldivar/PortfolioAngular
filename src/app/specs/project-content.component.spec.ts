@@ -3,7 +3,7 @@ import { ProjectContentComponent } from '../components/projects/project-content/
 import { CommonModule } from '@angular/common';
 import { Project } from '../../utils/config';
 
-describe('ProjectContentComponent', () => {
+describe('Project Content Component', () => {
   let component: ProjectContentComponent;
   let fixture: ComponentFixture<ProjectContentComponent>;
 

@@ -3,7 +3,7 @@ import { AvatarComponent } from '../components/avatar/avatar.component';
 import { ElementRef } from '@angular/core';
 import { Configuration } from '../../utils/config';
 
-describe('AvatarComponent', () => {
+describe('Avatar Component', () => {
   let component: AvatarComponent;
   let fixture: ComponentFixture<AvatarComponent>;
   let mockConfiguration: jasmine.SpyObj<Configuration>;
