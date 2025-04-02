@@ -4,7 +4,7 @@ import { NgbOffcanvas } from '@ng-bootstrap/ng-bootstrap';
 import { ElementRef, TemplateRef } from '@angular/core';
 import { Configuration } from '../../utils/config';
 
-describe('HeaderComponent', () => {
+describe('Header Component', () => {
   let component: HeaderComponent;
   let fixture: ComponentFixture<HeaderComponent>;
   let mockOffcanvasService: jasmine.SpyObj<NgbOffcanvas>;

@@ -1,7 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { RightSideBarComponent } from '../components/right-side-bar/right-side-bar.component';
 
-describe('RightSideBarComponent', () => {
+describe('Right Side Bar Component', () => {
   let component: RightSideBarComponent;
   let fixture: ComponentFixture<RightSideBarComponent>;
 

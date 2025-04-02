@@ -10,7 +10,7 @@ import { Configuration } from '../../../utils/config';
 export class PodcastComponent implements AfterViewInit, OnInit, OnDestroy {
   @ViewChild('podcast') podcast!: ElementRef;
   config = new Configuration();
-  private spotifyIframeApiReady: any;
+  public spotifyIframeApiReady: any;
   cdnUrl = import.meta.env.NG_APP_CLOUDFRONT_CDN + "/aboutme.webp";
 
   ngOnInit(): void {

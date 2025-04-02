@@ -5,7 +5,7 @@ import { AppToastService } from '../services/toasts.service';
 import { ContactService } from '../services/contact.service';
 import { ElementRef, TemplateRef, isDevMode } from '@angular/core';
 
-describe('ContactComponent', () => {
+describe('Contact Component', () => {
   let component: ContactComponent;
   let fixture: ComponentFixture<ContactComponent>;
   let mockContactService: jasmine.SpyObj<ContactService>;
