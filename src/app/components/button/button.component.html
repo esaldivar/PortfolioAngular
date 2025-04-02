@@ -1,3 +1,7 @@
-<a [href]="link">
-    {{text}}
-</a> 
+
+<a *ngIf="link" [href]="link" class="btn">
+    {{ text }}
+</a>
+<button *ngIf="!link" class="btn">
+    {{ text }}
+</button>
