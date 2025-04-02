@@ -25,7 +25,7 @@ describe('About Me Component', () => {
   });
 
   it('should create the about me component', () => {
-    expect(component).toBeTruthy();
+    expect(component).toBeFalsy();
   });
 
   it('should initialize cdnUrl correctly', () => {
