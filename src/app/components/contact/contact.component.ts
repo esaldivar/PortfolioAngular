@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef, isDevMode, TemplateRef, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, isDevMode, OnInit, TemplateRef, ViewChild } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { ContactService } from '../../services/contact.service';
@@ -12,11 +12,12 @@ import { Configuration } from '../../../utils/config';
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss'
 })
-export class ContactComponent implements AfterViewInit {
+export class ContactComponent implements OnInit,AfterViewInit {
   constructor(private contactService: ContactService, private toastService: AppToastService) { }
   @ViewChild('contact') contact!: ElementRef;
   show = false;
   config = new Configuration();
+  devMode = false;
 
   displayForm= false;
   thankYouMessage = false;
@@ -39,7 +40,9 @@ export class ContactComponent implements AfterViewInit {
     name: this.name,
     message: this.message
   });
-
+  ngOnInit(): void {
+    this.devMode = isDevMode();
+  }
   ngAfterViewInit () {
     this.config.sr(this.contact);
   }
@@ -56,7 +59,7 @@ export class ContactComponent implements AfterViewInit {
   async sendEmail(e: Event, template: TemplateRef<any>) {
     e.preventDefault(); 
     if(this.emailForm.valid) {
-      if(!isDevMode()){
+      if(!this.devMode){
         this.thankYouMessage = await this.contactService.sendEmail(this.emailForm);
         if(this.thankYouMessage){
           this.showSuccess(template);
