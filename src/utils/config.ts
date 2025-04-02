@@ -114,7 +114,7 @@ export class Configuration {
           website: 'https://spotify-profile.herokuapp.com/'
         },
         {
-          title: 'Gaming Project',
+          title: 'RPG Game',
           description: 'A web app for visualizing gaming data. View your top games, recently played games, and detailed information about each game. Create and save new playlists of recommended games based on your existing playlists and more.',
           techStack: ['React', 'Styled Components', 'Express', 'Spotify API'],
           github: 'https://github.com/bchiang7/spotify-profile',
