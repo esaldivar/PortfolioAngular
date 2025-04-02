@@ -18,7 +18,7 @@ jobs:
       - name: Setup node environment
         uses: actions/setup-node@v3
         with:
-          node-version: '16' # Specify the Node.js version required for your project
+          node-version: '18.19.1' # Specify the Node.js version required for your project
 
       # Install dependencies
       - name: Install dependencies
