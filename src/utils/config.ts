@@ -106,16 +106,16 @@ export class Configuration {
           website: 'https://spotify-profile.herokuapp.com/'
         },
         {
-          title: 'Spotify Profile',
-          description: 'A web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information about each track. Create and save new playlists of recommended tracks based on your existing playlists and more.',
+          title: 'DSA Visualizer',
+          description: 'A web app for visualizing algorithms and data structures. View the steps of each algorithm in action, including sorting algorithms, searching algorithms, and data structures like trees and graphs.',
           techStack: ['React', 'Styled Components', 'Express', 'Spotify API'],
           github: 'https://github.com/bchiang7/spotify-profile',
           imageUrl: `${cdnUrl}/aboutme.webp`,
           website: 'https://spotify-profile.herokuapp.com/'
         },
         {
-          title: 'Spotify Profile',
-          description: 'A web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information about each track. Create and save new playlists of recommended tracks based on your existing playlists and more.',
+          title: 'Gaming Project',
+          description: 'A web app for visualizing gaming data. View your top games, recently played games, and detailed information about each game. Create and save new playlists of recommended games based on your existing playlists and more.',
           techStack: ['React', 'Styled Components', 'Express', 'Spotify API'],
           github: 'https://github.com/bchiang7/spotify-profile',
           imageUrl: `${cdnUrl}/aboutme.webp`
